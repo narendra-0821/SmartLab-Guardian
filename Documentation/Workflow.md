@@ -14,10 +14,10 @@ validated on physical hardware.
 
 ## 2. System initialization
 
-The main application is in `p_test.c`. The initialization code includes
+The main application is in `main.c`. The initialization code includes
 LCD setup, RTC setup, keypad initialization, LED/buzzer GPIO
 initialization, and external interrupt configuration. Refer to
-`p_test.c` and `Initializations.c` for the exact call order and values.
+`main.c` and `Initializations.c` for the exact call order and values.
 
 ## 3. Password authentication
 
@@ -43,7 +43,7 @@ Relevant files: `keyPad.c`, `passwordCheck.c`.
 The reviewed implementation compares hour values; do not assume
 minute-level schedule precision.
 
-Relevant files: `rtc.c`, `Initializations.c`, `p_test.c`.
+Relevant files: `rtc.c`, `Initializations.c`, `main.c`.
 
 ## 5. Infrared remote reception
 
@@ -54,7 +54,7 @@ Relevant files: `rtc.c`, `Initializations.c`, `p_test.c`.
     information.
 4.  The decoded values are returned to the application.
 
-Relevant files: `IR_Receiver.c`, `IR_Receiver.h`, `p_test.c`.
+Relevant files: `IR_Receiver.c`, `IR_Receiver.h`, `main.c`.
 
 **Implementation consideration:** The main application contains a
 blocking polling loop while waiting for a valid IR frame. During this
@@ -80,7 +80,7 @@ indicators. Buzzer macros provide the warning output used by the
 emergency routine.
 
 Relevant files: `lcd_16x2.c`, `Initializations.c`, `all_defines.h`,
-`p_test.c`, and `ExtInterruptSwitches.c`.
+`main.c`, and `ExtInterruptSwitches.c`.
 
 ## 8. High-level flow
 
