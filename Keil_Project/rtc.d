@@ -1,0 +1,9 @@
+.\rtc.o: ..\Source_Code\rtc.c
+.\rtc.o: D:\ARM\Inc\Philips\LPC21xx.h
+.\rtc.o: ..\Source_Code\lcd_16x2.h
+.\rtc.o: ..\Source_Code\types.h
+.\rtc.o: ..\Source_Code\lcd_16x2_defines.h
+.\rtc.o: ..\Source_Code\rtc.h
+.\rtc.o: ..\Source_Code\types.h
+.\rtc.o: ..\Source_Code\rtc_defines.h
+.\rtc.o: ..\Source_Code\types.h

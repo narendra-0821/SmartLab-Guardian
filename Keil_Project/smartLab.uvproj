@@ -406,54 +406,49 @@
           <GroupName>Source Group 1</GroupName>
           <Files>
             <File>
-              <FileName>Startup.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\Startup.s</FilePath>
-            </File>
-            <File>
               <FileName>delay.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\delay.c</FilePath>
-            </File>
-            <File>
-              <FileName>lcd_16x2.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\lcd_16x2.c</FilePath>
-            </File>
-            <File>
-              <FileName>keyPad.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\keyPad.c</FilePath>
-            </File>
-            <File>
-              <FileName>rtc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\rtc.c</FilePath>
-            </File>
-            <File>
-              <FileName>Initializations.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Initializations.c</FilePath>
-            </File>
-            <File>
-              <FileName>p_test.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\p_test.c</FilePath>
-            </File>
-            <File>
-              <FileName>passwordCheck.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\passwordCheck.c</FilePath>
-            </File>
-            <File>
-              <FileName>IR_Receiver.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\IR_Receiver.c</FilePath>
+              <FilePath>..\Source_Code\delay.c</FilePath>
             </File>
             <File>
               <FileName>ExtInterruptSwitches.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\ExtInterruptSwitches.c</FilePath>
+              <FilePath>..\Source_Code\ExtInterruptSwitches.c</FilePath>
+            </File>
+            <File>
+              <FileName>Initializations.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Source_Code\Initializations.c</FilePath>
+            </File>
+            <File>
+              <FileName>IR_Receiver.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Source_Code\IR_Receiver.c</FilePath>
+            </File>
+            <File>
+              <FileName>keyPad.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Source_Code\keyPad.c</FilePath>
+            </File>
+            <File>
+              <FileName>lcd_16x2.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Source_Code\lcd_16x2.c</FilePath>
+            </File>
+            <File>
+              <FileName>main.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Source_Code\main.c</FilePath>
+            </File>
+            <File>
+              <FileName>passwordCheck.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Source_Code\passwordCheck.c</FilePath>
+            </File>
+            <File>
+              <FileName>rtc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Source_Code\rtc.c</FilePath>
             </File>
           </Files>
         </Group>

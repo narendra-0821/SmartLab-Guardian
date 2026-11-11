@@ -1,0 +1,10 @@
+.\keypad.o: ..\Source_Code\keyPad.c
+.\keypad.o: D:\ARM\Inc\Philips\LPC21xx.h
+.\keypad.o: ..\Source_Code\types.h
+.\keypad.o: ..\Source_Code\defines.h
+.\keypad.o: ..\Source_Code\keyBoard_defines.h
+.\keypad.o: ..\Source_Code\lcd_16x2.h
+.\keypad.o: ..\Source_Code\types.h
+.\keypad.o: ..\Source_Code\lcd_16x2_defines.h
+.\keypad.o: ..\Source_Code\delay.h
+.\keypad.o: ..\Source_Code\types.h

@@ -1,0 +1,14 @@
+.\passwordcheck.o: ..\Source_Code\passwordCheck.c
+.\passwordcheck.o: D:\ARM\Inc\Philips\LPC21xx.h
+.\passwordcheck.o: ..\Source_Code\types.h
+.\passwordcheck.o: ..\Source_Code\defines.h
+.\passwordcheck.o: ..\Source_Code\delay.h
+.\passwordcheck.o: ..\Source_Code\types.h
+.\passwordcheck.o: ..\Source_Code\passwordCheck.h
+.\passwordcheck.o: ..\Source_Code\types.h
+.\passwordcheck.o: ..\Source_Code\keyBoard_defines.h
+.\passwordcheck.o: ..\Source_Code\keyBoard.h
+.\passwordcheck.o: ..\Source_Code\types.h
+.\passwordcheck.o: ..\Source_Code\lcd_16x2.h
+.\passwordcheck.o: ..\Source_Code\types.h
+.\passwordcheck.o: ..\Source_Code\lcd_16x2_defines.h

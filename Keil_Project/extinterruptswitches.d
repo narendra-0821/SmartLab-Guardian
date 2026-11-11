@@ -1,0 +1,16 @@
+.\extinterruptswitches.o: ..\Source_Code\ExtInterruptSwitches.c
+.\extinterruptswitches.o: D:\ARM\Inc\Philips\LPC21xx.h
+.\extinterruptswitches.o: ..\Source_Code\lcd_16x2.h
+.\extinterruptswitches.o: ..\Source_Code\types.h
+.\extinterruptswitches.o: ..\Source_Code\lcd_16x2_defines.h
+.\extinterruptswitches.o: ..\Source_Code\delay.h
+.\extinterruptswitches.o: ..\Source_Code\types.h
+.\extinterruptswitches.o: ..\Source_Code\defines.h
+.\extinterruptswitches.o: ..\Source_Code\ExtInterruptSwitches.h
+.\extinterruptswitches.o: ..\Source_Code\keyBoard.h
+.\extinterruptswitches.o: ..\Source_Code\types.h
+.\extinterruptswitches.o: ..\Source_Code\all_defines.h
+.\extinterruptswitches.o: ..\Source_Code\types.h
+.\extinterruptswitches.o: ..\Source_Code\IR_Receiver.h
+.\extinterruptswitches.o: ..\Source_Code\passwordCheck.h
+.\extinterruptswitches.o: ..\Source_Code\types.h
