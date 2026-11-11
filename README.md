@@ -149,7 +149,7 @@ SmartLab-Guardian/
 │   ├── keyPad.c
 │   ├── rtc.c
 │   ├── Initializations.c
-│   ├── p_test.c
+│   ├── main.c
 │   ├── passwordCheck.c
 │   ├── IR_Receiver.c
 │   └── ExtInterruptSwitches.c
