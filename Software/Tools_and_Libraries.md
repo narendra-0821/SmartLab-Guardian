@@ -41,7 +41,7 @@ compatible Keil/ARMCC toolchain and verify the selected target.
   `Startup.s`                         Startup and processor
                                       initialization support
 
-  `p_test.c`                          Main application flow
+  `main.c`                          Main application flow
 
   `Initializations.c`                 Peripheral/interrupt initialization
                                       and operating-hour check
