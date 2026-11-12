@@ -42,7 +42,7 @@ void DisplayRTCDate(u32,u32,u32);
 
 // Set RTC date, month and year
 void SetRTCDateInfo(u32,u32,u32);
-
+void DisplayTimeBoundaries(void);
 
 /*================ RTC DAY FUNCTIONS ================*/
 

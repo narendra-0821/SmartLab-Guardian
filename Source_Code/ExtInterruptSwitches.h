@@ -27,3 +27,5 @@ void editRTC(void);
 
 // Allow the administrator to modify laboratory start and end time boundaries
 void editTimeBoundaries(void);
+void emergencyAlert(void);
+void rtc_interrupt(void);

@@ -22,7 +22,8 @@ and day-of-week constants.
 // GPIO pin numbers connected to the output devices
 #define LED1_DEVICE1 5  // P0.5 connected to Device 1 indication LED
 #define LED2_DEVICE2 4  // P0.4 connected to Device 2 indication LED
-#define BUZZER       24 // P1.24 connected to emergency buzzer
+#define BUZZER       21 //P0.21 for emergency buzzer indication
+
 
 
 /*================ LED CONTROL MACROS ================*/
@@ -40,6 +41,8 @@ and day-of-week constants.
 #define IR_KEY_1 1
 #define IR_KEY_2 2
 #define IR_KEY_TIME 47
+#define TIME_BOUNDARY_KEY 38
+#define SOUND_KEY 11
 
 // Check whether the received IR address and command match Device 1 control
 #define KEY_1_PRESSED (address==0 && command==IR_KEY_1)
@@ -47,11 +50,12 @@ and day-of-week constants.
 // Check whether the received IR address and command match Device 2 control
 #define KEY_2_PRESSED (address==0 && command==IR_KEY_2)
 
-// Check whether the received IR address and command match RTC display control
-#define TIME_KEY_PRESSED (address==0 && command==IR_KEY_TIME)
+// Check whether the received IR address and command match time display control
+#define TIME_KEY_PRESSED           (address==0 && command==IR_KEY_TIME)
+#define TIME_BOUNDARY_KEY_PRESSED  (address==0 && command==TIME_BOUNDARY_KEY)
 
 // Check whether the received IR address and command match the buzzer sound key
-#define SOUND_KEY_PRESSED (address==3 && command==11)
+#define SOUND_KEY_PRESSED (address==3 && command==SOUND_KEY)
 
 
 /*================ LED AND BUZZER STATUS DEFINITIONS ================*/
@@ -64,8 +68,8 @@ and day-of-week constants.
 #define AL_LED2_OFF IOSET0=1<<LED2_DEVICE2
 
 // Control the buzzer using its GPIO output bit
-#define BUZZER_ON IOSET1=1<<BUZZER   // Set buzzer output bit
-#define BUZZER_OFF IOCLR1=1<<BUZZER  // Clear buzzer output bit
+#define BUZZER_ON IOSET0=1<<BUZZER  // Set buzzer output bit
+#define BUZZER_OFF IOCLR0=1<<BUZZER // Clear buzzer output bit
 
 
 /*================ EXTERNAL INTERRUPT DEFINITIONS ================*/

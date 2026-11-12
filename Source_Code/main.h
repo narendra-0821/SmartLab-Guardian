@@ -47,6 +47,8 @@ u32 startTime=6, endTime=18;
 // Maintain the software flag indicating whether the laboratory lock is open
 u32 Lockopened=0;
 
+u32 emergency=0;
+u32 rtc_button_clicked=0;
 
 /*================ RTC GLOBAL VARIABLES ================*/
 

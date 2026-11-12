@@ -16,3 +16,4 @@
 .\main.o: ..\Source_Code\passwordCheck.h
 .\main.o: ..\Source_Code\types.h
 .\main.o: ..\Source_Code\IR_Receiver.h
+.\main.o: ..\Source_Code\ExtInterruptSwitches.h

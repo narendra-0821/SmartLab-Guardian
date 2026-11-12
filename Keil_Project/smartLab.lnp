@@ -1,14 +1,14 @@
 --cpu ARM7TDMI
+".\startup.o"
 ".\delay.o"
+".\main.o"
+".\lcd_16x2.o"
+".\keypad.o"
+".\rtc.o"
 ".\extinterruptswitches.o"
 ".\initializations.o"
 ".\ir_receiver.o"
-".\keypad.o"
-".\lcd_16x2.o"
-".\main.o"
 ".\passwordcheck.o"
-".\rtc.o"
-".\startup.o"
 --strict --scatter ".\smartLab.sct"
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

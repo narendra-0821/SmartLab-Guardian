@@ -3,6 +3,9 @@
 .\initializations.o: ..\Source_Code\delay.h
 .\initializations.o: ..\Source_Code\types.h
 .\initializations.o: ..\Source_Code\defines.h
+.\initializations.o: ..\Source_Code\lcd_16x2_defines.h
+.\initializations.o: ..\Source_Code\lcd_16x2.h
+.\initializations.o: ..\Source_Code\types.h
 .\initializations.o: ..\Source_Code\ExtInterruptSwitches.h
 .\initializations.o: ..\Source_Code\rtc.h
 .\initializations.o: ..\Source_Code\types.h

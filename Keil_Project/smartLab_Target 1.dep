@@ -1,32 +1,26 @@
 Dependencies for Project 'smartLab', Target 'Target 1': (DO NOT MODIFY !)
+F (..\Source_Code\Startup.s)(0x6AF36FD5)(--cpu ARM7TDMI --pd "__EVAL SETA 1" -g --apcs=interwork -I D:\ARM\RV31\INC-I D:\ARM\CMSIS\Include-I D:\ARM\Inc\Philips--list .\startup.lst --xref -o .\startup.o --depend .\startup.d)
 F (..\Source_Code\delay.c)(0x6AF41307)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I D:\ARM\RV31\INC-I D:\ARM\CMSIS\Include-I D:\ARM\Inc\Philips-o .\delay.o --omf_browse .\delay.crf --depend .\delay.d)
 I (..\Source_Code\types.h)(0x6AF49562)
-F (..\Source_Code\ExtInterruptSwitches.c)(0x6AF49DB6)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I D:\ARM\RV31\INC-I D:\ARM\CMSIS\Include-I D:\ARM\Inc\Philips-o .\extinterruptswitches.o --omf_browse .\extinterruptswitches.crf --depend .\extinterruptswitches.d)
+F (..\Source_Code\main.c)(0x6AF619ED)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I D:\ARM\RV31\INC-I D:\ARM\CMSIS\Include-I D:\ARM\Inc\Philips-o .\main.o --omf_browse .\main.crf --depend .\main.d)
 I (D:\ARM\Inc\Philips\LPC21xx.h)(0x532C1500)
+I (..\Source_Code\delay.h)(0x6AF496B8)
+I (..\Source_Code\types.h)(0x6AF49562)
+I (..\Source_Code\main.h)(0x6AF6163D)
 I (..\Source_Code\lcd_16x2.h)(0x6AF4969E)
-I (..\Source_Code\types.h)(0x6AF49562)
 I (..\Source_Code\lcd_16x2_defines.h)(0x6AF4965D)
-I (..\Source_Code\delay.h)(0x6AF496B8)
-I (..\Source_Code\defines.h)(0x6AF4958B)
-I (..\Source_Code\ExtInterruptSwitches.h)(0x6AF4976F)
 I (..\Source_Code\keyBoard.h)(0x6AF49DB6)
-I (..\Source_Code\all_defines.h)(0x6AF495FC)
-I (..\Source_Code\IR_Receiver.h)(0x6AF4975B)
+I (..\Source_Code\all_defines.h)(0x6AF614F2)
+I (..\Source_Code\rtc.h)(0x6AF5AF64)
 I (..\Source_Code\passwordCheck.h)(0x6AF49788)
-F (..\Source_Code\Initializations.c)(0x6AF41AA6)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I D:\ARM\RV31\INC-I D:\ARM\CMSIS\Include-I D:\ARM\Inc\Philips-o .\initializations.o --omf_browse .\initializations.crf --depend .\initializations.d)
-I (D:\ARM\Inc\Philips\LPC21xx.h)(0x532C1500)
-I (..\Source_Code\delay.h)(0x6AF496B8)
-I (..\Source_Code\types.h)(0x6AF49562)
-I (..\Source_Code\defines.h)(0x6AF4958B)
-I (..\Source_Code\ExtInterruptSwitches.h)(0x6AF4976F)
-I (..\Source_Code\rtc.h)(0x6AF49702)
-I (..\Source_Code\all_defines.h)(0x6AF495FC)
-F (..\Source_Code\IR_Receiver.c)(0x6AF41215)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I D:\ARM\RV31\INC-I D:\ARM\CMSIS\Include-I D:\ARM\Inc\Philips-o .\ir_receiver.o --omf_browse .\ir_receiver.crf --depend .\ir_receiver.d)
-I (D:\ARM\Inc\Philips\LPC214x.h)(0x532C1500)
-I (..\Source_Code\delay.h)(0x6AF496B8)
-I (..\Source_Code\types.h)(0x6AF49562)
-I (..\Source_Code\defines.h)(0x6AF4958B)
 I (..\Source_Code\IR_Receiver.h)(0x6AF4975B)
+I (..\Source_Code\ExtInterruptSwitches.h)(0x6AF61399)
+F (..\Source_Code\lcd_16x2.c)(0x6AF4129F)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I D:\ARM\RV31\INC-I D:\ARM\CMSIS\Include-I D:\ARM\Inc\Philips-o .\lcd_16x2.o --omf_browse .\lcd_16x2.crf --depend .\lcd_16x2.d)
+I (D:\ARM\Inc\Philips\LPC21xx.h)(0x532C1500)
+I (..\Source_Code\defines.h)(0x6AF4958B)
+I (..\Source_Code\lcd_16x2_defines.h)(0x6AF4965D)
+I (..\Source_Code\types.h)(0x6AF49562)
+I (..\Source_Code\delay.h)(0x6AF496B8)
 F (..\Source_Code\keyPad.c)(0x6AF49DB6)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I D:\ARM\RV31\INC-I D:\ARM\CMSIS\Include-I D:\ARM\Inc\Philips-o .\keypad.o --omf_browse .\keypad.crf --depend .\keypad.d)
 I (D:\ARM\Inc\Philips\LPC21xx.h)(0x532C1500)
 I (..\Source_Code\types.h)(0x6AF49562)
@@ -35,23 +29,40 @@ I (..\Source_Code\keyBoard_defines.h)(0x6AF49670)
 I (..\Source_Code\lcd_16x2.h)(0x6AF4969E)
 I (..\Source_Code\lcd_16x2_defines.h)(0x6AF4965D)
 I (..\Source_Code\delay.h)(0x6AF496B8)
-F (..\Source_Code\lcd_16x2.c)(0x6AF4129F)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I D:\ARM\RV31\INC-I D:\ARM\CMSIS\Include-I D:\ARM\Inc\Philips-o .\lcd_16x2.o --omf_browse .\lcd_16x2.crf --depend .\lcd_16x2.d)
+F (..\Source_Code\rtc.c)(0x6AF41244)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I D:\ARM\RV31\INC-I D:\ARM\CMSIS\Include-I D:\ARM\Inc\Philips-o .\rtc.o --omf_browse .\rtc.crf --depend .\rtc.d)
 I (D:\ARM\Inc\Philips\LPC21xx.h)(0x532C1500)
+I (..\Source_Code\lcd_16x2.h)(0x6AF4969E)
+I (..\Source_Code\types.h)(0x6AF49562)
+I (..\Source_Code\lcd_16x2_defines.h)(0x6AF4965D)
+I (..\Source_Code\rtc.h)(0x6AF5AF64)
+I (..\Source_Code\rtc_defines.h)(0x6AF49845)
+F (..\Source_Code\ExtInterruptSwitches.c)(0x6AF61D2B)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I D:\ARM\RV31\INC-I D:\ARM\CMSIS\Include-I D:\ARM\Inc\Philips-o .\extinterruptswitches.o --omf_browse .\extinterruptswitches.crf --depend .\extinterruptswitches.d)
+I (D:\ARM\Inc\Philips\LPC21xx.h)(0x532C1500)
+I (..\Source_Code\lcd_16x2.h)(0x6AF4969E)
+I (..\Source_Code\types.h)(0x6AF49562)
+I (..\Source_Code\lcd_16x2_defines.h)(0x6AF4965D)
+I (..\Source_Code\delay.h)(0x6AF496B8)
+I (..\Source_Code\defines.h)(0x6AF4958B)
+I (..\Source_Code\ExtInterruptSwitches.h)(0x6AF61399)
+I (..\Source_Code\keyBoard.h)(0x6AF49DB6)
+I (..\Source_Code\all_defines.h)(0x6AF614F2)
+I (..\Source_Code\IR_Receiver.h)(0x6AF4975B)
+I (..\Source_Code\passwordCheck.h)(0x6AF49788)
+F (..\Source_Code\Initializations.c)(0x6AF5AF64)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I D:\ARM\RV31\INC-I D:\ARM\CMSIS\Include-I D:\ARM\Inc\Philips-o .\initializations.o --omf_browse .\initializations.crf --depend .\initializations.d)
+I (D:\ARM\Inc\Philips\LPC21xx.h)(0x532C1500)
+I (..\Source_Code\delay.h)(0x6AF496B8)
+I (..\Source_Code\types.h)(0x6AF49562)
 I (..\Source_Code\defines.h)(0x6AF4958B)
 I (..\Source_Code\lcd_16x2_defines.h)(0x6AF4965D)
-I (..\Source_Code\types.h)(0x6AF49562)
-I (..\Source_Code\delay.h)(0x6AF496B8)
-F (..\Source_Code\main.c)(0x6AF49E17)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I D:\ARM\RV31\INC-I D:\ARM\CMSIS\Include-I D:\ARM\Inc\Philips-o .\main.o --omf_browse .\main.crf --depend .\main.d)
-I (D:\ARM\Inc\Philips\LPC21xx.h)(0x532C1500)
-I (..\Source_Code\delay.h)(0x6AF496B8)
-I (..\Source_Code\types.h)(0x6AF49562)
-I (..\Source_Code\main.h)(0x6AF497D3)
 I (..\Source_Code\lcd_16x2.h)(0x6AF4969E)
-I (..\Source_Code\lcd_16x2_defines.h)(0x6AF4965D)
-I (..\Source_Code\keyBoard.h)(0x6AF49DB6)
-I (..\Source_Code\all_defines.h)(0x6AF495FC)
-I (..\Source_Code\rtc.h)(0x6AF49702)
-I (..\Source_Code\passwordCheck.h)(0x6AF49788)
+I (..\Source_Code\ExtInterruptSwitches.h)(0x6AF61399)
+I (..\Source_Code\rtc.h)(0x6AF5AF64)
+I (..\Source_Code\all_defines.h)(0x6AF614F2)
+F (..\Source_Code\IR_Receiver.c)(0x6AF41215)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I D:\ARM\RV31\INC-I D:\ARM\CMSIS\Include-I D:\ARM\Inc\Philips-o .\ir_receiver.o --omf_browse .\ir_receiver.crf --depend .\ir_receiver.d)
+I (D:\ARM\Inc\Philips\LPC214x.h)(0x532C1500)
+I (..\Source_Code\delay.h)(0x6AF496B8)
+I (..\Source_Code\types.h)(0x6AF49562)
+I (..\Source_Code\defines.h)(0x6AF4958B)
 I (..\Source_Code\IR_Receiver.h)(0x6AF4975B)
 F (..\Source_Code\passwordCheck.c)(0x6AF414FE)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I D:\ARM\RV31\INC-I D:\ARM\CMSIS\Include-I D:\ARM\Inc\Philips-o .\passwordcheck.o --omf_browse .\passwordcheck.crf --depend .\passwordcheck.d)
 I (D:\ARM\Inc\Philips\LPC21xx.h)(0x532C1500)
@@ -63,11 +74,3 @@ I (..\Source_Code\keyBoard_defines.h)(0x6AF49670)
 I (..\Source_Code\keyBoard.h)(0x6AF49DB6)
 I (..\Source_Code\lcd_16x2.h)(0x6AF4969E)
 I (..\Source_Code\lcd_16x2_defines.h)(0x6AF4965D)
-F (..\Source_Code\rtc.c)(0x6AF41244)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I D:\ARM\RV31\INC-I D:\ARM\CMSIS\Include-I D:\ARM\Inc\Philips-o .\rtc.o --omf_browse .\rtc.crf --depend .\rtc.d)
-I (D:\ARM\Inc\Philips\LPC21xx.h)(0x532C1500)
-I (..\Source_Code\lcd_16x2.h)(0x6AF4969E)
-I (..\Source_Code\types.h)(0x6AF49562)
-I (..\Source_Code\lcd_16x2_defines.h)(0x6AF4965D)
-I (..\Source_Code\rtc.h)(0x6AF49702)
-I (..\Source_Code\rtc_defines.h)(0x6AF49845)
-F (..\Source_Code\Startup.s)(0x6AF36FD5)(--cpu ARM7TDMI --pd "__EVAL SETA 1" -g --apcs=interwork -I D:\ARM\RV31\INC-I D:\ARM\CMSIS\Include-I D:\ARM\Inc\Philips--list .\startup.lst --xref -o .\startup.o --depend .\startup.d)

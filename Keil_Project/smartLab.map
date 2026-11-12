@@ -4,39 +4,6 @@ ARM Linker, 5.03 [Build 76] [MDK-ARM Lite]
 
 Section Cross References
 
-    extinterruptswitches.o(.text) refers to lcd_16x2.o(.text) for CmdLCD
-    extinterruptswitches.o(.text) refers to ir_receiver.o(.text) for readTSOP
-    extinterruptswitches.o(.text) refers to keypad.o(.text) for ReadTime
-    extinterruptswitches.o(.text) refers to delay.o(.text) for delay_s
-    extinterruptswitches.o(.text) refers to main.o(.data) for led1_status
-    extinterruptswitches.o(.text) refers to extinterruptswitches.o(.data) for sTime
-    extinterruptswitches.o(.text) refers to passwordcheck.o(.text) for passWord
-    initializations.o(.text) refers to rtc.o(.text) for SetRTCTimeInfo
-    initializations.o(.text) refers to extinterruptswitches.o(.text) for eint3_nvirq_isr
-    initializations.o(.text) refers to main.o(.data) for sec
-    ir_receiver.o(.text) refers to delay.o(.text) for delay_us
-    ir_receiver.o(.text) refers to ir_receiver.o(.data) for previous_key_valid
-    keypad.o(.text) refers to lcd_16x2.o(.text) for CmdLCD
-    keypad.o(.text) refers to aeabi_sdiv.o(.text_udiv) for __aeabi_uidivmod
-    keypad.o(.text) refers to delay.o(.text) for delay_s
-    keypad.o(.text) refers to keypad.o(.data) for kpmLUT
-    lcd_16x2.o(.text) refers to delay.o(.text) for delay_us
-    lcd_16x2.o(.text) refers to aeabi_sdiv.o(.text_udiv) for __aeabi_uidivmod
-    main.o(.text) refers to lcd_16x2.o(.text) for InitLCD
-    main.o(.text) refers to rtc.o(.text) for RTC_Init
-    main.o(.text) refers to initializations.o(.text) for EINT_Init
-    main.o(.text) refers to keypad.o(.text) for InitKPM
-    main.o(.text) refers to delay.o(.text) for delay_s
-    main.o(.text) refers to passwordcheck.o(.text) for passWord
-    main.o(.text) refers to main.o(.constdata) for cgramLUT_ON
-    main.o(.text) refers to main.o(.data) for Lockopened
-    passwordcheck.o(.text) refers to lcd_16x2.o(.text) for CmdLCD
-    passwordcheck.o(.text) refers to keypad.o(.text) for ReadNums
-    passwordcheck.o(.text) refers to delay.o(.text) for delay_s
-    passwordcheck.o(.text) refers to passwordcheck.o(.data) for userPIN
-    rtc.o(.text) refers to lcd_16x2.o(.text) for CmdLCD
-    rtc.o(.text) refers to aeabi_sdiv.o(.text_udiv) for __aeabi_uidivmod
-    rtc.o(.text) refers to rtc.o(.data) for week
     startup.o(STACK) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
     startup.o(HEAP) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
     startup.o(RESET) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
@@ -46,6 +13,42 @@ Section Cross References
     startup.o(.text) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
     startup.o(.text) refers to startup.o(HEAP) for Heap_Mem
     startup.o(.text) refers to startup.o(STACK) for Stack_Mem
+    main.o(.text) refers to lcd_16x2.o(.text) for InitLCD
+    main.o(.text) refers to rtc.o(.text) for RTC_Init
+    main.o(.text) refers to initializations.o(.text) for EINT_Init
+    main.o(.text) refers to keypad.o(.text) for InitKPM
+    main.o(.text) refers to delay.o(.text) for delay_s
+    main.o(.text) refers to passwordcheck.o(.text) for passWord
+    main.o(.text) refers to extinterruptswitches.o(.text) for emergencyAlert
+    main.o(.text) refers to main.o(.constdata) for cgramLUT_ON
+    main.o(.text) refers to main.o(.data) for Lockopened
+    main.o(.text) refers to ir_receiver.o(.text) for readTSOP
+    lcd_16x2.o(.text) refers to delay.o(.text) for delay_us
+    lcd_16x2.o(.text) refers to aeabi_sdiv.o(.text_udiv) for __aeabi_uidivmod
+    keypad.o(.text) refers to lcd_16x2.o(.text) for CmdLCD
+    keypad.o(.text) refers to aeabi_sdiv.o(.text_udiv) for __aeabi_uidivmod
+    keypad.o(.text) refers to delay.o(.text) for delay_s
+    keypad.o(.text) refers to keypad.o(.data) for kpmLUT
+    rtc.o(.text) refers to lcd_16x2.o(.text) for CmdLCD
+    rtc.o(.text) refers to aeabi_sdiv.o(.text_udiv) for __aeabi_uidivmod
+    rtc.o(.text) refers to rtc.o(.data) for week
+    extinterruptswitches.o(.text) refers to lcd_16x2.o(.text) for CmdLCD
+    extinterruptswitches.o(.text) refers to ir_receiver.o(.text) for readTSOP
+    extinterruptswitches.o(.text) refers to keypad.o(.text) for ReadTime
+    extinterruptswitches.o(.text) refers to delay.o(.text) for delay_s
+    extinterruptswitches.o(.text) refers to main.o(.data) for emergency
+    extinterruptswitches.o(.text) refers to extinterruptswitches.o(.data) for sTime
+    extinterruptswitches.o(.text) refers to passwordcheck.o(.text) for passWord
+    initializations.o(.text) refers to rtc.o(.text) for SetRTCTimeInfo
+    initializations.o(.text) refers to lcd_16x2.o(.text) for CmdLCD
+    initializations.o(.text) refers to extinterruptswitches.o(.text) for eint3_nvirq_isr
+    initializations.o(.text) refers to main.o(.data) for sec
+    ir_receiver.o(.text) refers to delay.o(.text) for delay_us
+    ir_receiver.o(.text) refers to ir_receiver.o(.data) for previous_key_valid
+    passwordcheck.o(.text) refers to lcd_16x2.o(.text) for CmdLCD
+    passwordcheck.o(.text) refers to keypad.o(.text) for ReadNums
+    passwordcheck.o(.text) refers to delay.o(.text) for delay_s
+    passwordcheck.o(.text) refers to passwordcheck.o(.data) for userPIN
     aeabi_sdiv.o(.text_udiv) refers to aeabi_sdiv.o(.text) for __arm_div2
     aeabi_sdiv_div0.o(.text_udiv) refers to aeabi_sdiv_div0.o(.text) for __arm_div2
     __main.o(!!!main) refers to rtentry.o(.ARM.Collect$$rtentry$$00000000) for __rt_entry
@@ -175,8 +178,8 @@ Image Symbol Table
 
     RESET                                    0x00000000   Section      272  startup.o(RESET)
     ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit1.o ABSOLUTE
-    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit2.o ABSOLUTE
     ../clib/angel/boardlib.s                 0x00000000   Number         0  boardshut.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit2.o ABSOLUTE
     ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit3.o ABSOLUTE
     ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_copy.o ABSOLUTE
     ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_zi.o ABSOLUTE
@@ -191,8 +194,8 @@ Image Symbol Table
     ../clib/angel/rt.s                       0x00000000   Number         0  rt_raise.o ABSOLUTE
     ../clib/angel/scatter.s                  0x00000000   Number         0  __scatter.o ABSOLUTE
     ../clib/angel/startup.s                  0x00000000   Number         0  __main.o ABSOLUTE
-    ../clib/angel/sys.s                      0x00000000   Number         0  sys_stackheap_outer.o ABSOLUTE
     ../clib/angel/sys.s                      0x00000000   Number         0  use_no_semi.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  sys_stackheap_outer.o ABSOLUTE
     ../clib/angel/sys.s                      0x00000000   Number         0  libspace.o ABSOLUTE
     ../clib/angel/sys.s                      0x00000000   Number         0  indicate_semi.o ABSOLUTE
     ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_command.o ABSOLUTE
@@ -291,44 +294,44 @@ Image Symbol Table
     .ARM.Collect$$rtexit$$00000002           0x00000210   Section        0  rtexit2.o(.ARM.Collect$$rtexit$$00000002)
     .ARM.Collect$$rtexit$$00000003           0x00000210   Section        4  rtexit2.o(.ARM.Collect$$rtexit$$00000003)
     .ARM.Collect$$rtexit$$00000004           0x00000214   Section        8  rtexit2.o(.ARM.Collect$$rtexit$$00000004)
-    .text                                    0x0000021c   Section        0  delay.o(.text)
-    .text                                    0x00000278   Section        0  extinterruptswitches.o(.text)
-    .text                                    0x000008ec   Section        0  initializations.o(.text)
-    .text                                    0x00000b6c   Section        0  ir_receiver.o(.text)
-    WaitEdge                                 0x00000b6c   ARM Code      84  ir_receiver.o(.text)
-    WaitIdle                                 0x00000bc0   ARM Code      88  ir_receiver.o(.text)
-    .text                                    0x00000e14   Section        0  keypad.o(.text)
-    .text                                    0x00001330   Section        0  lcd_16x2.o(.text)
-    .text                                    0x00001544   Section        0  main.o(.text)
-    .text                                    0x00001854   Section        0  passwordcheck.o(.text)
-    .text                                    0x00001d00   Section        0  rtc.o(.text)
-    .text                                    0x00001f50   Section       32  startup.o(.text)
-    .text                                    0x00001f70   Section      384  aeabi_sdiv.o(.text)
-    __arm_div8                               0x00001f9c   ARM Code       0  aeabi_sdiv.o(.text)
-    __arm_div5                               0x00001fc0   ARM Code       0  aeabi_sdiv.o(.text)
-    __arm_div2                               0x00001fe4   ARM Code       0  aeabi_sdiv.o(.text)
-    __arm_div_large                          0x00002020   ARM Code       0  aeabi_sdiv.o(.text)
-    .text                                    0x000020f0   Section        0  heapauxi.o(.text)
-    .text                                    0x000020f8   Section       96  sys_stackheap_outer.o(.text)
-    .text                                    0x00002158   Section        0  exit.o(.text)
-    .text                                    0x00002164   Section       12  libspace.o(.text)
-    .text                                    0x00002178   Section        0  sys_exit.o(.text)
-    .text                                    0x00002184   Section        4  use_no_semi.o(.text)
-    .text                                    0x00002188   Section        0  indicate_semi.o(.text)
-    .text_udiv                               0x00002188   Section       36  aeabi_sdiv.o(.text_udiv)
-    .constdata                               0x000021ac   Section       32  main.o(.constdata)
-    .data                                    0x40000000   Section       12  extinterruptswitches.o(.data)
-    .data                                    0x4000000c   Section       13  ir_receiver.o(.data)
-    .data                                    0x40000019   Section       16  keypad.o(.data)
-    .data                                    0x4000002c   Section       64  main.o(.data)
-    .data                                    0x4000006c   Section       12  passwordcheck.o(.data)
-    .data                                    0x40000078   Section       28  rtc.o(.data)
-    .bss                                     0x40000094   Section       96  libspace.o(.bss)
-    HEAP                                     0x400000f8   Section        0  startup.o(HEAP)
-    STACK                                    0x400000f8   Section     1160  startup.o(STACK)
-    Heap_Mem                                 0x400000f8   Data           0  startup.o(HEAP)
-    Stack_Mem                                0x400000f8   Data        1024  startup.o(STACK)
-    Stack_Top                                0x40000580   Data           0  startup.o(STACK)
+    .text                                    0x0000021c   Section       32  startup.o(.text)
+    .text                                    0x0000023c   Section        0  delay.o(.text)
+    .text                                    0x00000298   Section        0  main.o(.text)
+    .text                                    0x0000069c   Section        0  lcd_16x2.o(.text)
+    .text                                    0x000008b0   Section        0  keypad.o(.text)
+    .text                                    0x00000dcc   Section        0  rtc.o(.text)
+    .text                                    0x0000101c   Section        0  extinterruptswitches.o(.text)
+    .text                                    0x00001774   Section        0  initializations.o(.text)
+    .text                                    0x00001a50   Section        0  ir_receiver.o(.text)
+    WaitEdge                                 0x00001a50   ARM Code      84  ir_receiver.o(.text)
+    WaitIdle                                 0x00001aa4   ARM Code      88  ir_receiver.o(.text)
+    .text                                    0x00001cf8   Section        0  passwordcheck.o(.text)
+    .text                                    0x000021a4   Section      384  aeabi_sdiv.o(.text)
+    __arm_div8                               0x000021d0   ARM Code       0  aeabi_sdiv.o(.text)
+    __arm_div5                               0x000021f4   ARM Code       0  aeabi_sdiv.o(.text)
+    __arm_div2                               0x00002218   ARM Code       0  aeabi_sdiv.o(.text)
+    __arm_div_large                          0x00002254   ARM Code       0  aeabi_sdiv.o(.text)
+    .text                                    0x00002324   Section        0  heapauxi.o(.text)
+    .text                                    0x0000232c   Section       96  sys_stackheap_outer.o(.text)
+    .text                                    0x0000238c   Section        0  exit.o(.text)
+    .text                                    0x00002398   Section       12  libspace.o(.text)
+    .text                                    0x000023ac   Section        0  sys_exit.o(.text)
+    .text                                    0x000023b8   Section        4  use_no_semi.o(.text)
+    .text                                    0x000023bc   Section        0  indicate_semi.o(.text)
+    .text_udiv                               0x000023bc   Section       36  aeabi_sdiv.o(.text_udiv)
+    .constdata                               0x000023e0   Section       32  main.o(.constdata)
+    .data                                    0x40000000   Section       72  main.o(.data)
+    .data                                    0x40000048   Section       16  keypad.o(.data)
+    .data                                    0x40000058   Section       28  rtc.o(.data)
+    .data                                    0x40000074   Section       12  extinterruptswitches.o(.data)
+    .data                                    0x40000080   Section       13  ir_receiver.o(.data)
+    .data                                    0x40000090   Section       12  passwordcheck.o(.data)
+    .bss                                     0x4000009c   Section       96  libspace.o(.bss)
+    HEAP                                     0x40000100   Section        0  startup.o(HEAP)
+    STACK                                    0x40000100   Section     1160  startup.o(STACK)
+    Heap_Mem                                 0x40000100   Data           0  startup.o(HEAP)
+    Stack_Mem                                0x40000100   Data        1024  startup.o(STACK)
+    Stack_Top                                0x40000588   Data           0  startup.o(STACK)
 
     Global Symbols
 
@@ -412,102 +415,107 @@ Image Symbol Table
     __rt_exit_ls                             0x00000210   ARM Code       0  rtexit2.o(.ARM.Collect$$rtexit$$00000003)
     __rt_exit_prels_1                        0x00000210   ARM Code       0  rtexit2.o(.ARM.Collect$$rtexit$$00000002)
     __rt_exit_exit                           0x00000214   ARM Code       0  rtexit2.o(.ARM.Collect$$rtexit$$00000004)
-    delay_us                                 0x0000021c   ARM Code      28  delay.o(.text)
-    delay_ms                                 0x00000238   ARM Code      28  delay.o(.text)
-    delay_s                                  0x00000254   ARM Code      28  delay.o(.text)
-    eint0_fiq_isr                            0x00000278   ARM Code     200  extinterruptswitches.o(.text)
-    editTimeBoundaries                       0x00000340   ARM Code     196  extinterruptswitches.o(.text)
-    editRTC                                  0x00000404   ARM Code     984  extinterruptswitches.o(.text)
-    eint3_nvirq_isr                          0x000007dc   ARM Code     212  extinterruptswitches.o(.text)
-    EINT_Init                                0x000008ec   ARM Code     120  initializations.o(.text)
-    SetRTC                                   0x00000964   ARM Code      52  initializations.o(.text)
-    DisplayRTC                               0x00000998   ARM Code     120  initializations.o(.text)
-    Init_LEDS                                0x00000a10   ARM Code     112  initializations.o(.text)
-    IsWithinTime                             0x00000a80   ARM Code     168  initializations.o(.text)
-    RC5_Receive                              0x00000c18   ARM Code     208  ir_receiver.o(.text)
-    readTSOP                                 0x00000ce8   ARM Code     260  ir_receiver.o(.text)
-    InitKPM                                  0x00000e14   ARM Code      24  keypad.o(.text)
-    ColScan                                  0x00000e2c   ARM Code      44  keypad.o(.text)
-    RowCheck                                 0x00000e58   ARM Code     112  keypad.o(.text)
-    ColCheck                                 0x00000ec8   ARM Code      60  keypad.o(.text)
-    KeyScan                                  0x00000f04   ARM Code      60  keypad.o(.text)
-    ReadTime                                 0x00000f40   ARM Code     288  keypad.o(.text)
-    ReadNums                                 0x00001060   ARM Code     368  keypad.o(.text)
-    ReadYear                                 0x000011d0   ARM Code     352  keypad.o(.text)
-    WriteLCD                                 0x00001330   ARM Code      80  lcd_16x2.o(.text)
-    CmdLCD                                   0x00001380   ARM Code      36  lcd_16x2.o(.text)
-    CharLCD                                  0x000013a4   ARM Code      36  lcd_16x2.o(.text)
-    InitLCD                                  0x000013c8   ARM Code     124  lcd_16x2.o(.text)
-    StrLCD                                   0x00001444   ARM Code      40  lcd_16x2.o(.text)
-    U32LCD                                   0x0000146c   ARM Code     120  lcd_16x2.o(.text)
-    BuildCGRAM                               0x000014e4   ARM Code      92  lcd_16x2.o(.text)
-    main                                     0x00001544   ARM Code     784  main.o(.text)
-    changePIN                                0x00001854   ARM Code     348  passwordcheck.o(.text)
-    TryAgain                                 0x000019b0   ARM Code     132  passwordcheck.o(.text)
-    passWord                                 0x00001a34   ARM Code     664  passwordcheck.o(.text)
-    RTC_Init                                 0x00001d00   ARM Code      32  rtc.o(.text)
-    GetRTCTimeInfo                           0x00001d20   ARM Code      40  rtc.o(.text)
-    DisplayRTCTime                           0x00001d48   ARM Code     204  rtc.o(.text)
-    GetRTCDateInfo                           0x00001e14   ARM Code      40  rtc.o(.text)
-    DisplayRTCDate                           0x00001e3c   ARM Code     160  rtc.o(.text)
-    SetRTCTimeInfo                           0x00001edc   ARM Code      20  rtc.o(.text)
-    SetRTCDateInfo                           0x00001ef0   ARM Code      20  rtc.o(.text)
-    GetRTCDay                                0x00001f04   ARM Code      16  rtc.o(.text)
-    DisplayRTCDay                            0x00001f14   ARM Code      36  rtc.o(.text)
-    SetRTCDay                                0x00001f38   ARM Code      12  rtc.o(.text)
-    __user_initial_stackheap                 0x00001f50   ARM Code       0  startup.o(.text)
-    __aeabi_idiv                             0x00001f70   ARM Code       0  aeabi_sdiv.o(.text)
-    __aeabi_idivmod                          0x00001f70   ARM Code     384  aeabi_sdiv.o(.text)
-    __use_two_region_memory                  0x000020f1   Thumb Code     2  heapauxi.o(.text)
-    __rt_heap_escrow$2region                 0x000020f3   Thumb Code     2  heapauxi.o(.text)
-    __rt_heap_expand$2region                 0x000020f5   Thumb Code     2  heapauxi.o(.text)
-    __user_setup_stackheap                   0x000020f8   ARM Code      96  sys_stackheap_outer.o(.text)
-    exit                                     0x00002159   Thumb Code    12  exit.o(.text)
-    __user_libspace                          0x00002164   ARM Code      12  libspace.o(.text)
-    __user_perproc_libspace                  0x00002164   ARM Code       0  libspace.o(.text)
-    __user_perthread_libspace                0x00002164   ARM Code       0  libspace.o(.text)
-    Inline ARM to Thumb Veneer to _sys_exit  0x00002170   ARM Code       8  sys_exit.o(.text)
-    _sys_exit                                0x00002179   Thumb Code     8  sys_exit.o(.text)
-    __I$use$semihosting                      0x00002184   ARM Code       0  use_no_semi.o(.text)
-    __use_no_semihosting_swi                 0x00002184   ARM Code       4  use_no_semi.o(.text)
-    __aeabi_uidiv                            0x00002188   ARM Code       0  aeabi_sdiv.o(.text_udiv)
-    __aeabi_uidivmod                         0x00002188   ARM Code      36  aeabi_sdiv.o(.text_udiv)
-    __semihosting_library_function           0x00002188   ARM Code       0  indicate_semi.o(.text)
-    cgramLUT_ON                              0x000021ac   Data           8  main.o(.constdata)
-    cgramLUT_OFF                             0x000021b4   Data           8  main.o(.constdata)
-    cgramLUT_CLOCK                           0x000021bc   Data           8  main.o(.constdata)
-    guardianLUT                              0x000021c4   Data           8  main.o(.constdata)
-    Region$$Table$$Base                      0x000021cc   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x000021ec   Number         0  anon$$obj.o(Region$$Table)
-    key                                      0x40000000   Data           1  extinterruptswitches.o(.data)
-    sTime                                    0x40000004   Data           4  extinterruptswitches.o(.data)
-    eTime                                    0x40000008   Data           4  extinterruptswitches.o(.data)
-    last_address                             0x4000000c   Data           4  ir_receiver.o(.data)
-    last_command                             0x40000010   Data           4  ir_receiver.o(.data)
-    last_toggle                              0x40000014   Data           4  ir_receiver.o(.data)
-    previous_key_valid                       0x40000018   Data           1  ir_receiver.o(.data)
-    kpmLUT                                   0x40000019   Data          16  keypad.o(.data)
-    led1_status                              0x4000002c   Data           4  main.o(.data)
-    led2_status                              0x40000030   Data           4  main.o(.data)
-    startTime                                0x40000034   Data           4  main.o(.data)
-    endTime                                  0x40000038   Data           4  main.o(.data)
-    Lockopened                               0x4000003c   Data           4  main.o(.data)
-    hour                                     0x40000040   Data           4  main.o(.data)
-    min                                      0x40000044   Data           4  main.o(.data)
-    sec                                      0x40000048   Data           4  main.o(.data)
-    date                                     0x4000004c   Data           4  main.o(.data)
-    month                                    0x40000050   Data           4  main.o(.data)
-    year                                     0x40000054   Data           4  main.o(.data)
-    day                                      0x40000058   Data           4  main.o(.data)
-    lastKey                                  0x4000005c   Data           1  main.o(.data)
-    address                                  0x40000060   Data           4  main.o(.data)
-    command                                  0x40000064   Data           4  main.o(.data)
-    toggle                                   0x40000068   Data           4  main.o(.data)
-    smileLUT                                 0x4000006c   Data           8  passwordcheck.o(.data)
-    userPIN                                  0x40000074   Data           4  passwordcheck.o(.data)
-    week                                     0x40000078   Data          28  rtc.o(.data)
-    __libspace_start                         0x40000094   Data          96  libspace.o(.bss)
-    __temporary_stack_top$libspace           0x400000f4   Data           0  libspace.o(.bss)
+    __user_initial_stackheap                 0x0000021c   ARM Code       0  startup.o(.text)
+    delay_us                                 0x0000023c   ARM Code      28  delay.o(.text)
+    delay_ms                                 0x00000258   ARM Code      28  delay.o(.text)
+    delay_s                                  0x00000274   ARM Code      28  delay.o(.text)
+    main                                     0x00000298   ARM Code    1024  main.o(.text)
+    WriteLCD                                 0x0000069c   ARM Code      80  lcd_16x2.o(.text)
+    CmdLCD                                   0x000006ec   ARM Code      36  lcd_16x2.o(.text)
+    CharLCD                                  0x00000710   ARM Code      36  lcd_16x2.o(.text)
+    InitLCD                                  0x00000734   ARM Code     124  lcd_16x2.o(.text)
+    StrLCD                                   0x000007b0   ARM Code      40  lcd_16x2.o(.text)
+    U32LCD                                   0x000007d8   ARM Code     120  lcd_16x2.o(.text)
+    BuildCGRAM                               0x00000850   ARM Code      92  lcd_16x2.o(.text)
+    InitKPM                                  0x000008b0   ARM Code      24  keypad.o(.text)
+    ColScan                                  0x000008c8   ARM Code      44  keypad.o(.text)
+    RowCheck                                 0x000008f4   ARM Code     112  keypad.o(.text)
+    ColCheck                                 0x00000964   ARM Code      60  keypad.o(.text)
+    KeyScan                                  0x000009a0   ARM Code      60  keypad.o(.text)
+    ReadTime                                 0x000009dc   ARM Code     288  keypad.o(.text)
+    ReadNums                                 0x00000afc   ARM Code     368  keypad.o(.text)
+    ReadYear                                 0x00000c6c   ARM Code     352  keypad.o(.text)
+    RTC_Init                                 0x00000dcc   ARM Code      32  rtc.o(.text)
+    GetRTCTimeInfo                           0x00000dec   ARM Code      40  rtc.o(.text)
+    DisplayRTCTime                           0x00000e14   ARM Code     204  rtc.o(.text)
+    GetRTCDateInfo                           0x00000ee0   ARM Code      40  rtc.o(.text)
+    DisplayRTCDate                           0x00000f08   ARM Code     160  rtc.o(.text)
+    SetRTCTimeInfo                           0x00000fa8   ARM Code      20  rtc.o(.text)
+    SetRTCDateInfo                           0x00000fbc   ARM Code      20  rtc.o(.text)
+    GetRTCDay                                0x00000fd0   ARM Code      16  rtc.o(.text)
+    DisplayRTCDay                            0x00000fe0   ARM Code      36  rtc.o(.text)
+    SetRTCDay                                0x00001004   ARM Code      12  rtc.o(.text)
+    eint0_fiq_isr                            0x0000101c   ARM Code      32  extinterruptswitches.o(.text)
+    eint3_nvirq_isr                          0x0000103c   ARM Code      44  extinterruptswitches.o(.text)
+    emergencyAlert                           0x00001068   ARM Code     188  extinterruptswitches.o(.text)
+    editTimeBoundaries                       0x00001124   ARM Code     276  extinterruptswitches.o(.text)
+    editRTC                                  0x00001238   ARM Code    1072  extinterruptswitches.o(.text)
+    rtc_interrupt                            0x00001668   ARM Code     268  extinterruptswitches.o(.text)
+    EINT_Init                                0x00001774   ARM Code     120  initializations.o(.text)
+    SetRTC                                   0x000017ec   ARM Code      52  initializations.o(.text)
+    DisplayRTC                               0x00001820   ARM Code     120  initializations.o(.text)
+    DisplayTimeBoundaries                    0x00001898   ARM Code      68  initializations.o(.text)
+    Init_LEDS                                0x000018dc   ARM Code     112  initializations.o(.text)
+    IsWithinTime                             0x0000194c   ARM Code     168  initializations.o(.text)
+    RC5_Receive                              0x00001afc   ARM Code     208  ir_receiver.o(.text)
+    readTSOP                                 0x00001bcc   ARM Code     260  ir_receiver.o(.text)
+    changePIN                                0x00001cf8   ARM Code     348  passwordcheck.o(.text)
+    TryAgain                                 0x00001e54   ARM Code     132  passwordcheck.o(.text)
+    passWord                                 0x00001ed8   ARM Code     664  passwordcheck.o(.text)
+    __aeabi_idiv                             0x000021a4   ARM Code       0  aeabi_sdiv.o(.text)
+    __aeabi_idivmod                          0x000021a4   ARM Code     384  aeabi_sdiv.o(.text)
+    __use_two_region_memory                  0x00002325   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_escrow$2region                 0x00002327   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_expand$2region                 0x00002329   Thumb Code     2  heapauxi.o(.text)
+    __user_setup_stackheap                   0x0000232c   ARM Code      96  sys_stackheap_outer.o(.text)
+    exit                                     0x0000238d   Thumb Code    12  exit.o(.text)
+    __user_libspace                          0x00002398   ARM Code      12  libspace.o(.text)
+    __user_perproc_libspace                  0x00002398   ARM Code       0  libspace.o(.text)
+    __user_perthread_libspace                0x00002398   ARM Code       0  libspace.o(.text)
+    Inline ARM to Thumb Veneer to _sys_exit  0x000023a4   ARM Code       8  sys_exit.o(.text)
+    _sys_exit                                0x000023ad   Thumb Code     8  sys_exit.o(.text)
+    __I$use$semihosting                      0x000023b8   ARM Code       0  use_no_semi.o(.text)
+    __use_no_semihosting_swi                 0x000023b8   ARM Code       4  use_no_semi.o(.text)
+    __aeabi_uidiv                            0x000023bc   ARM Code       0  aeabi_sdiv.o(.text_udiv)
+    __aeabi_uidivmod                         0x000023bc   ARM Code      36  aeabi_sdiv.o(.text_udiv)
+    __semihosting_library_function           0x000023bc   ARM Code       0  indicate_semi.o(.text)
+    cgramLUT_ON                              0x000023e0   Data           8  main.o(.constdata)
+    cgramLUT_OFF                             0x000023e8   Data           8  main.o(.constdata)
+    cgramLUT_CLOCK                           0x000023f0   Data           8  main.o(.constdata)
+    guardianLUT                              0x000023f8   Data           8  main.o(.constdata)
+    Region$$Table$$Base                      0x00002400   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00002420   Number         0  anon$$obj.o(Region$$Table)
+    led1_status                              0x40000000   Data           4  main.o(.data)
+    led2_status                              0x40000004   Data           4  main.o(.data)
+    startTime                                0x40000008   Data           4  main.o(.data)
+    endTime                                  0x4000000c   Data           4  main.o(.data)
+    Lockopened                               0x40000010   Data           4  main.o(.data)
+    emergency                                0x40000014   Data           4  main.o(.data)
+    rtc_button_clicked                       0x40000018   Data           4  main.o(.data)
+    hour                                     0x4000001c   Data           4  main.o(.data)
+    min                                      0x40000020   Data           4  main.o(.data)
+    sec                                      0x40000024   Data           4  main.o(.data)
+    date                                     0x40000028   Data           4  main.o(.data)
+    month                                    0x4000002c   Data           4  main.o(.data)
+    year                                     0x40000030   Data           4  main.o(.data)
+    day                                      0x40000034   Data           4  main.o(.data)
+    lastKey                                  0x40000038   Data           1  main.o(.data)
+    address                                  0x4000003c   Data           4  main.o(.data)
+    command                                  0x40000040   Data           4  main.o(.data)
+    toggle                                   0x40000044   Data           4  main.o(.data)
+    kpmLUT                                   0x40000048   Data          16  keypad.o(.data)
+    week                                     0x40000058   Data          28  rtc.o(.data)
+    key                                      0x40000074   Data           1  extinterruptswitches.o(.data)
+    sTime                                    0x40000078   Data           4  extinterruptswitches.o(.data)
+    eTime                                    0x4000007c   Data           4  extinterruptswitches.o(.data)
+    last_address                             0x40000080   Data           4  ir_receiver.o(.data)
+    last_command                             0x40000084   Data           4  ir_receiver.o(.data)
+    last_toggle                              0x40000088   Data           4  ir_receiver.o(.data)
+    previous_key_valid                       0x4000008c   Data           1  ir_receiver.o(.data)
+    smileLUT                                 0x40000090   Data           8  passwordcheck.o(.data)
+    userPIN                                  0x40000098   Data           4  passwordcheck.o(.data)
+    __libspace_start                         0x4000009c   Data          96  libspace.o(.bss)
+    __temporary_stack_top$libspace           0x400000fc   Data           0  libspace.o(.bss)
 
 
 
@@ -517,101 +525,101 @@ Memory Map of the image
 
   Image Entry point : 0x00000110
 
-  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x00002280, Max: 0x00080000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x000024bc, Max: 0x00080000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Base: 0x00000000, Size: 0x000021ec, Max: 0x00080000, ABSOLUTE)
+    Execution Region ER_IROM1 (Base: 0x00000000, Size: 0x00002420, Max: 0x00080000, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x00000000   0x00000110   Code   RO          186    RESET               startup.o
-    0x00000110   0x00000008   Code   RO          213  * !!!main             c_t.l(__main.o)
-    0x00000118   0x0000003c   Code   RO          379    !!!scatter          c_t.l(__scatter.o)
-    0x00000154   0x00000028   Code   RO          381    !!handler_copy      c_t.l(__scatter_copy.o)
-    0x0000017c   0x0000002c   Code   RO          383    !!handler_zi        c_t.l(__scatter_zi.o)
-    0x000001a8   0x00000008   Ven    RO          250    .ARM.Collect$$libinit$$00000000  c_t.l(libinit.o)
-    0x000001b0   0x00000002   Code   RO          250    .ARM.Collect$$libinit$$00000000  c_t.l(libinit.o)
-    0x000001b2   0x00000000   Code   RO          263    .ARM.Collect$$libinit$$00000002  c_t.l(libinit2.o)
-    0x000001b2   0x00000000   Code   RO          266    .ARM.Collect$$libinit$$00000008  c_t.l(libinit2.o)
-    0x000001b2   0x00000000   Code   RO          268    .ARM.Collect$$libinit$$0000000A  c_t.l(libinit2.o)
-    0x000001b2   0x00000000   Code   RO          270    .ARM.Collect$$libinit$$0000000C  c_t.l(libinit2.o)
-    0x000001b2   0x00000000   Code   RO          273    .ARM.Collect$$libinit$$0000000F  c_t.l(libinit2.o)
-    0x000001b2   0x00000000   Code   RO          275    .ARM.Collect$$libinit$$00000011  c_t.l(libinit2.o)
-    0x000001b2   0x00000000   Code   RO          277    .ARM.Collect$$libinit$$00000013  c_t.l(libinit2.o)
-    0x000001b2   0x00000000   Code   RO          279    .ARM.Collect$$libinit$$00000015  c_t.l(libinit2.o)
-    0x000001b2   0x00000000   Code   RO          281    .ARM.Collect$$libinit$$00000017  c_t.l(libinit2.o)
-    0x000001b2   0x00000000   Code   RO          283    .ARM.Collect$$libinit$$00000019  c_t.l(libinit2.o)
-    0x000001b2   0x00000000   Code   RO          285    .ARM.Collect$$libinit$$0000001B  c_t.l(libinit2.o)
-    0x000001b2   0x00000000   Code   RO          287    .ARM.Collect$$libinit$$0000001D  c_t.l(libinit2.o)
-    0x000001b2   0x00000000   Code   RO          289    .ARM.Collect$$libinit$$0000001F  c_t.l(libinit2.o)
-    0x000001b2   0x00000000   Code   RO          291    .ARM.Collect$$libinit$$00000021  c_t.l(libinit2.o)
-    0x000001b2   0x00000000   Code   RO          293    .ARM.Collect$$libinit$$00000023  c_t.l(libinit2.o)
-    0x000001b2   0x00000000   Code   RO          297    .ARM.Collect$$libinit$$0000002A  c_t.l(libinit2.o)
-    0x000001b2   0x00000000   Code   RO          299    .ARM.Collect$$libinit$$0000002C  c_t.l(libinit2.o)
-    0x000001b2   0x00000000   Code   RO          301    .ARM.Collect$$libinit$$0000002E  c_t.l(libinit2.o)
-    0x000001b2   0x00000000   Code   RO          303    .ARM.Collect$$libinit$$00000030  c_t.l(libinit2.o)
-    0x000001b2   0x0000000c   Code   RO          304    .ARM.Collect$$libinit$$00000031  c_t.l(libinit2.o)
+    0x00000000   0x00000110   Code   RO            3    RESET               startup.o
+    0x00000110   0x00000008   Code   RO          215  * !!!main             c_t.l(__main.o)
+    0x00000118   0x0000003c   Code   RO          381    !!!scatter          c_t.l(__scatter.o)
+    0x00000154   0x00000028   Code   RO          383    !!handler_copy      c_t.l(__scatter_copy.o)
+    0x0000017c   0x0000002c   Code   RO          385    !!handler_zi        c_t.l(__scatter_zi.o)
+    0x000001a8   0x00000008   Ven    RO          252    .ARM.Collect$$libinit$$00000000  c_t.l(libinit.o)
+    0x000001b0   0x00000002   Code   RO          252    .ARM.Collect$$libinit$$00000000  c_t.l(libinit.o)
+    0x000001b2   0x00000000   Code   RO          265    .ARM.Collect$$libinit$$00000002  c_t.l(libinit2.o)
+    0x000001b2   0x00000000   Code   RO          268    .ARM.Collect$$libinit$$00000008  c_t.l(libinit2.o)
+    0x000001b2   0x00000000   Code   RO          270    .ARM.Collect$$libinit$$0000000A  c_t.l(libinit2.o)
+    0x000001b2   0x00000000   Code   RO          272    .ARM.Collect$$libinit$$0000000C  c_t.l(libinit2.o)
+    0x000001b2   0x00000000   Code   RO          275    .ARM.Collect$$libinit$$0000000F  c_t.l(libinit2.o)
+    0x000001b2   0x00000000   Code   RO          277    .ARM.Collect$$libinit$$00000011  c_t.l(libinit2.o)
+    0x000001b2   0x00000000   Code   RO          279    .ARM.Collect$$libinit$$00000013  c_t.l(libinit2.o)
+    0x000001b2   0x00000000   Code   RO          281    .ARM.Collect$$libinit$$00000015  c_t.l(libinit2.o)
+    0x000001b2   0x00000000   Code   RO          283    .ARM.Collect$$libinit$$00000017  c_t.l(libinit2.o)
+    0x000001b2   0x00000000   Code   RO          285    .ARM.Collect$$libinit$$00000019  c_t.l(libinit2.o)
+    0x000001b2   0x00000000   Code   RO          287    .ARM.Collect$$libinit$$0000001B  c_t.l(libinit2.o)
+    0x000001b2   0x00000000   Code   RO          289    .ARM.Collect$$libinit$$0000001D  c_t.l(libinit2.o)
+    0x000001b2   0x00000000   Code   RO          291    .ARM.Collect$$libinit$$0000001F  c_t.l(libinit2.o)
+    0x000001b2   0x00000000   Code   RO          293    .ARM.Collect$$libinit$$00000021  c_t.l(libinit2.o)
+    0x000001b2   0x00000000   Code   RO          295    .ARM.Collect$$libinit$$00000023  c_t.l(libinit2.o)
+    0x000001b2   0x00000000   Code   RO          299    .ARM.Collect$$libinit$$0000002A  c_t.l(libinit2.o)
+    0x000001b2   0x00000000   Code   RO          301    .ARM.Collect$$libinit$$0000002C  c_t.l(libinit2.o)
+    0x000001b2   0x00000000   Code   RO          303    .ARM.Collect$$libinit$$0000002E  c_t.l(libinit2.o)
+    0x000001b2   0x00000000   Code   RO          305    .ARM.Collect$$libinit$$00000030  c_t.l(libinit2.o)
+    0x000001b2   0x0000000c   Code   RO          306    .ARM.Collect$$libinit$$00000031  c_t.l(libinit2.o)
     0x000001be   0x00000002   PAD
-    0x000001c0   0x00000008   Ven    RO          337    .ARM.Collect$$libshutdown$$00000000  c_t.l(libshutdown.o)
-    0x000001c8   0x00000004   Code   RO          337    .ARM.Collect$$libshutdown$$00000000  c_t.l(libshutdown.o)
-    0x000001cc   0x00000000   Code   RO          364    .ARM.Collect$$libshutdown$$00000003  c_t.l(libshutdown2.o)
-    0x000001cc   0x00000000   Code   RO          367    .ARM.Collect$$libshutdown$$00000006  c_t.l(libshutdown2.o)
-    0x000001cc   0x00000000   Code   RO          370    .ARM.Collect$$libshutdown$$00000009  c_t.l(libshutdown2.o)
-    0x000001cc   0x00000000   Code   RO          372    .ARM.Collect$$libshutdown$$0000000B  c_t.l(libshutdown2.o)
-    0x000001cc   0x00000000   Code   RO          375    .ARM.Collect$$libshutdown$$0000000E  c_t.l(libshutdown2.o)
-    0x000001cc   0x00000006   Code   RO          376    .ARM.Collect$$libshutdown$$0000000F  c_t.l(libshutdown2.o)
+    0x000001c0   0x00000008   Ven    RO          339    .ARM.Collect$$libshutdown$$00000000  c_t.l(libshutdown.o)
+    0x000001c8   0x00000004   Code   RO          339    .ARM.Collect$$libshutdown$$00000000  c_t.l(libshutdown.o)
+    0x000001cc   0x00000000   Code   RO          366    .ARM.Collect$$libshutdown$$00000003  c_t.l(libshutdown2.o)
+    0x000001cc   0x00000000   Code   RO          369    .ARM.Collect$$libshutdown$$00000006  c_t.l(libshutdown2.o)
+    0x000001cc   0x00000000   Code   RO          372    .ARM.Collect$$libshutdown$$00000009  c_t.l(libshutdown2.o)
+    0x000001cc   0x00000000   Code   RO          374    .ARM.Collect$$libshutdown$$0000000B  c_t.l(libshutdown2.o)
+    0x000001cc   0x00000000   Code   RO          377    .ARM.Collect$$libshutdown$$0000000E  c_t.l(libshutdown2.o)
+    0x000001cc   0x00000006   Code   RO          378    .ARM.Collect$$libshutdown$$0000000F  c_t.l(libshutdown2.o)
     0x000001d2   0x00000002   PAD
-    0x000001d4   0x00000000   Code   RO          215    .ARM.Collect$$rtentry$$00000000  c_t.l(rtentry.o)
-    0x000001d4   0x00000000   Code   RO          221    .ARM.Collect$$rtentry$$00000002  c_t.l(rtentry2.o)
-    0x000001d4   0x00000008   Code   RO          233    .ARM.Collect$$rtentry$$00000004  c_t.l(rtentry4.o)
-    0x000001dc   0x00000000   Code   RO          223    .ARM.Collect$$rtentry$$00000009  c_t.l(rtentry2.o)
-    0x000001dc   0x00000004   Code   RO          224    .ARM.Collect$$rtentry$$0000000A  c_t.l(rtentry2.o)
-    0x000001e0   0x00000000   Code   RO          226    .ARM.Collect$$rtentry$$0000000C  c_t.l(rtentry2.o)
-    0x000001e0   0x00000028   Code   RO          227    .ARM.Collect$$rtentry$$0000000D  c_t.l(rtentry2.o)
-    0x00000208   0x00000004   Ven    RO          254    .ARM.Collect$$rtexit$$00000000  c_t.l(rtexit.o)
-    0x0000020c   0x00000004   Code   RO          254    .ARM.Collect$$rtexit$$00000000  c_t.l(rtexit.o)
-    0x00000210   0x00000000   Code   RO          308    .ARM.Collect$$rtexit$$00000002  c_t.l(rtexit2.o)
-    0x00000210   0x00000004   Code   RO          309    .ARM.Collect$$rtexit$$00000003  c_t.l(rtexit2.o)
-    0x00000214   0x00000008   Code   RO          310    .ARM.Collect$$rtexit$$00000004  c_t.l(rtexit2.o)
-    0x0000021c   0x0000005c   Code   RO            1    .text               delay.o
-    0x00000278   0x00000674   Code   RO           17    .text               extinterruptswitches.o
-    0x000008ec   0x00000280   Code   RO           62    .text               initializations.o
-    0x00000b6c   0x000002a8   Code   RO           80    .text               ir_receiver.o
-    0x00000e14   0x0000051c   Code   RO           98    .text               keypad.o
-    0x00001330   0x00000214   Code   RO          116    .text               lcd_16x2.o
-    0x00001544   0x00000310   Code   RO          130    .text               main.o
-    0x00001854   0x000004ac   Code   RO          151    .text               passwordcheck.o
-    0x00001d00   0x00000250   Code   RO          166    .text               rtc.o
-    0x00001f50   0x00000020   Code   RO          187    .text               startup.o
-    0x00001f70   0x00000180   Code   RO          195    .text               c_t.l(aeabi_sdiv.o)
-    0x000020f0   0x00000006   Code   RO          211    .text               c_t.l(heapauxi.o)
-    0x000020f6   0x00000002   PAD
-    0x000020f8   0x00000060   Code   RO          237    .text               c_t.l(sys_stackheap_outer.o)
-    0x00002158   0x0000000c   Code   RO          239    .text               c_t.l(exit.o)
-    0x00002164   0x0000000c   Code   RO          251    .text               c_t.l(libspace.o)
-    0x00002170   0x00000008   Ven    RO          305    .text               c_t.l(sys_exit.o)
-    0x00002178   0x0000000c   Code   RO          305    .text               c_t.l(sys_exit.o)
-    0x00002184   0x00000004   Code   RO          326    .text               c_t.l(use_no_semi.o)
-    0x00002188   0x00000000   Code   RO          328    .text               c_t.l(indicate_semi.o)
-    0x00002188   0x00000024   Code   RO          196    .text_udiv          c_t.l(aeabi_sdiv.o)
-    0x000021ac   0x00000020   Data   RO          131    .constdata          main.o
-    0x000021cc   0x00000020   Data   RO          377    Region$$Table       anon$$obj.o
+    0x000001d4   0x00000000   Code   RO          217    .ARM.Collect$$rtentry$$00000000  c_t.l(rtentry.o)
+    0x000001d4   0x00000000   Code   RO          223    .ARM.Collect$$rtentry$$00000002  c_t.l(rtentry2.o)
+    0x000001d4   0x00000008   Code   RO          235    .ARM.Collect$$rtentry$$00000004  c_t.l(rtentry4.o)
+    0x000001dc   0x00000000   Code   RO          225    .ARM.Collect$$rtentry$$00000009  c_t.l(rtentry2.o)
+    0x000001dc   0x00000004   Code   RO          226    .ARM.Collect$$rtentry$$0000000A  c_t.l(rtentry2.o)
+    0x000001e0   0x00000000   Code   RO          228    .ARM.Collect$$rtentry$$0000000C  c_t.l(rtentry2.o)
+    0x000001e0   0x00000028   Code   RO          229    .ARM.Collect$$rtentry$$0000000D  c_t.l(rtentry2.o)
+    0x00000208   0x00000004   Ven    RO          256    .ARM.Collect$$rtexit$$00000000  c_t.l(rtexit.o)
+    0x0000020c   0x00000004   Code   RO          256    .ARM.Collect$$rtexit$$00000000  c_t.l(rtexit.o)
+    0x00000210   0x00000000   Code   RO          310    .ARM.Collect$$rtexit$$00000002  c_t.l(rtexit2.o)
+    0x00000210   0x00000004   Code   RO          311    .ARM.Collect$$rtexit$$00000003  c_t.l(rtexit2.o)
+    0x00000214   0x00000008   Code   RO          312    .ARM.Collect$$rtexit$$00000004  c_t.l(rtexit2.o)
+    0x0000021c   0x00000020   Code   RO            4    .text               startup.o
+    0x0000023c   0x0000005c   Code   RO           11    .text               delay.o
+    0x00000298   0x00000404   Code   RO           26    .text               main.o
+    0x0000069c   0x00000214   Code   RO           74    .text               lcd_16x2.o
+    0x000008b0   0x0000051c   Code   RO           91    .text               keypad.o
+    0x00000dcc   0x00000250   Code   RO          111    .text               rtc.o
+    0x0000101c   0x00000758   Code   RO          129    .text               extinterruptswitches.o
+    0x00001774   0x000002dc   Code   RO          147    .text               initializations.o
+    0x00001a50   0x000002a8   Code   RO          162    .text               ir_receiver.o
+    0x00001cf8   0x000004ac   Code   RO          180    .text               passwordcheck.o
+    0x000021a4   0x00000180   Code   RO          197    .text               c_t.l(aeabi_sdiv.o)
+    0x00002324   0x00000006   Code   RO          213    .text               c_t.l(heapauxi.o)
+    0x0000232a   0x00000002   PAD
+    0x0000232c   0x00000060   Code   RO          239    .text               c_t.l(sys_stackheap_outer.o)
+    0x0000238c   0x0000000c   Code   RO          241    .text               c_t.l(exit.o)
+    0x00002398   0x0000000c   Code   RO          253    .text               c_t.l(libspace.o)
+    0x000023a4   0x00000008   Ven    RO          307    .text               c_t.l(sys_exit.o)
+    0x000023ac   0x0000000c   Code   RO          307    .text               c_t.l(sys_exit.o)
+    0x000023b8   0x00000004   Code   RO          328    .text               c_t.l(use_no_semi.o)
+    0x000023bc   0x00000000   Code   RO          330    .text               c_t.l(indicate_semi.o)
+    0x000023bc   0x00000024   Code   RO          198    .text_udiv          c_t.l(aeabi_sdiv.o)
+    0x000023e0   0x00000020   Data   RO           27    .constdata          main.o
+    0x00002400   0x00000020   Data   RO          379    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Base: 0x40000000, Size: 0x00000580, Max: 0x00008000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Base: 0x40000000, Size: 0x00000588, Max: 0x00008000, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x40000000   0x0000000c   Data   RW           18    .data               extinterruptswitches.o
-    0x4000000c   0x0000000d   Data   RW           81    .data               ir_receiver.o
-    0x40000019   0x00000010   Data   RW           99    .data               keypad.o
-    0x40000029   0x00000003   PAD
-    0x4000002c   0x00000040   Data   RW          132    .data               main.o
-    0x4000006c   0x0000000c   Data   RW          152    .data               passwordcheck.o
-    0x40000078   0x0000001c   Data   RW          167    .data               rtc.o
-    0x40000094   0x00000060   Zero   RW          252    .bss                c_t.l(libspace.o)
-    0x400000f4   0x00000004   PAD
-    0x400000f8   0x00000000   Zero   RW          185    HEAP                startup.o
-    0x400000f8   0x00000488   Zero   RW          184    STACK               startup.o
+    0x40000000   0x00000048   Data   RW           28    .data               main.o
+    0x40000048   0x00000010   Data   RW           92    .data               keypad.o
+    0x40000058   0x0000001c   Data   RW          112    .data               rtc.o
+    0x40000074   0x0000000c   Data   RW          130    .data               extinterruptswitches.o
+    0x40000080   0x0000000d   Data   RW          163    .data               ir_receiver.o
+    0x4000008d   0x00000003   PAD
+    0x40000090   0x0000000c   Data   RW          181    .data               passwordcheck.o
+    0x4000009c   0x00000060   Zero   RW          254    .bss                c_t.l(libspace.o)
+    0x400000fc   0x00000004   PAD
+    0x40000100   0x00000000   Zero   RW            2    HEAP                startup.o
+    0x40000100   0x00000488   Zero   RW            1    STACK               startup.o
 
 
 ==============================================================================
@@ -622,18 +630,18 @@ Image component sizes
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
         92          8          0          0          0       2484   delay.o
-      1652        280          0         12          0       2461   extinterruptswitches.o
-       640         68          0          0          0       1613   initializations.o
+      1880        288          0         12          0       2774   extinterruptswitches.o
+       732         92          0          0          0       1231   initializations.o
        680         40          0         13          0       2054   ir_receiver.o
-      1308         64          0         16          0       2888   keypad.o
+      1308         64          0         16          0       3444   keypad.o
        532          4          0          0          0       2443   lcd_16x2.o
-       784        148         32         64          0       2670   main.o
+      1028        160         32         72          0       2879   main.o
       1196        320          0         12          0       2001   passwordcheck.o
        592         12          0         28          0       2806   rtc.o
        304         60          0          0       1160        500   startup.o
 
     ----------------------------------------------------------------------
-      7780       1004         64        148       1160      21920   Object Totals
+      8344       1048         64        156       1160      22616   Object Totals
          0          0         32          0          0          0   (incl. Generated)
          0          0          0          3          0          0   (incl. Padding)
 
@@ -683,15 +691,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      8620       1024         64        148       1260      21692   Grand Totals
-      8620       1024         64        148       1260      21692   ELF Image Totals
-      8620       1024         64        148          0          0   ROM Totals
+      9184       1068         64        156       1260      22388   Grand Totals
+      9184       1068         64        156       1260      22388   ELF Image Totals
+      9184       1068         64        156          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 8684 (   8.48kB)
-    Total RW  Size (RW Data + ZI Data)              1408 (   1.38kB)
-    Total ROM Size (Code + RO Data + RW Data)       8832 (   8.63kB)
+    Total RO  Size (Code + RO Data)                 9248 (   9.03kB)
+    Total RW  Size (RW Data + ZI Data)              1416 (   1.38kB)
+    Total ROM Size (Code + RO Data + RW Data)       9404 (   9.18kB)
 
 ==============================================================================
 

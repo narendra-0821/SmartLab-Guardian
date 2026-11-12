@@ -18,7 +18,8 @@ operating hours.
 
 // Header file for bit manipulation macros
 #include "defines.h"
-
+#include "lcd_16x2_defines.h"
+#include "lcd_16x2.h"
 // Header file for external interrupt configurations
 #include "ExtInterruptSwitches.h"
 
@@ -80,10 +81,10 @@ void EINT_Init(){
 
 void SetRTC(){
 
-    SetRTCTimeInfo(16,44,0);            // Set RTC time: 16:44:00
-    SetRTCDateInfo(21,4,2026);          // Set RTC date: 21/04/202
+    SetRTCTimeInfo(15,2,0);            // Set RTC time: 16:44:00
+    SetRTCDateInfo(12,11,2026);          // Set RTC date: 21/04/202
 
-    SetRTCDay(WED);                     // Set the day of the week to Wednesday
+    SetRTCDay(THU);                     // Set the day of the week to Wednesday
 }
 
 
@@ -101,6 +102,14 @@ void DisplayRTC(void){
     DisplayRTCDay(day);                 // Display the retrieved day on LCD
 }
 
+void DisplayTimeBoundaries(void){
+	CmdLCD(GOTO_LINE1_POS0);
+	StrLCD("START TIME=");
+	U32LCD(startTime);
+	CmdLCD(GOTO_LINE2_POS0);
+	StrLCD("END TIME=");
+	U32LCD(endTime);
+} 
 
 /*================ LED AND BUZZER INITIALIZATION ================*/
 
@@ -109,7 +118,7 @@ void Init_LEDS(){
     // Configure LED and buzzer GPIO pins as output (IODIR bit = 1)
     IODIR0|= 1<<LED1_DEVICE1;           // Set LED1 pin as output
     IODIR0|= 1<<LED2_DEVICE2;           // Set LED2 pin as output
-    IODIR1|= 1<<BUZZER;                 // Set buzzer pin as output
+    IODIR0|= 1<<BUZZER;                 // Set buzzer pin as output
 
     /* Initially both LEDs are ON */
     IOCLR0 = 1<<LED1_DEVICE1;           // Clear LED1 output bit to turn ON LED1
@@ -117,8 +126,8 @@ void Init_LEDS(){
 
     IOCLR0 = 1<<LED2_DEVICE2;           // Clear LED2 output bit to turn ON LED2
     led2_status = 1;                    // Update software status of LED2
-
-    IOSET1 = 1<<BUZZER;                 // Set buzzer output bit
+	/* Initially both BUZZER are ON */
+    IOCLR0 = 1<<BUZZER;                 // Set buzzer output bit
 }
 
 
@@ -137,3 +146,4 @@ unsigned int IsWithinTime(void)
 
     return 0;                           // Return 0 if current hour is outside operating hours
 }
+
