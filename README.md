@@ -113,7 +113,7 @@ The LPC2148 is the central processing unit. It receives information from the key
 ### 🖼️ System Block Diagram
 
 <p align="center">
-  <img src="E:\SmartLab-Guardian\Hardware\Block_Diagram"
+  <img src="E:\SmartLab-Guardian\Hardware\Block_Diagram.png"
        alt="SmartLab Guardian System Block Diagram"
        width="100%">
 </p>
