@@ -113,7 +113,7 @@ The LPC2148 is the central processing unit. It receives information from the key
 ### 🖼️ System Block Diagram
 
 <p align="center">
-  <img src="E:\SmartLab-Guardian\Hardware\Block_Diagram.png"
+  <img src="SmartLab-Guardian\Hardware\Block_Diagram.png"
        alt="SmartLab Guardian System Block Diagram"
        width="100%">
 </p>
@@ -122,7 +122,7 @@ The LPC2148 is the central processing unit. It receives information from the key
   <em>Centralized LPC2148 architecture showing input peripherals, processing and output devices.</em>
 </p>
 
-> **Image asset:** Add your final SmartLab Guardian block diagram at `Hardware/Block_Diagram/SmartLab-Guardian-Architecture.png`.
+
 
 ### 🔷 Functional Architecture
 
