@@ -581,8 +581,6 @@ Add screenshots from the working system to the corresponding folders. Do not use
 
 <p align="center"><em>Complete LPC2148 laboratory control system hardware setup.</em></p>
 
-> **Gallery setup:** These are recommended image filenames. Replace them with actual project screenshots and hardware photographs. Until the files are added, the corresponding images will not display on GitHub.
-
 ---
 
 ## 🧪 Testing and Validation
