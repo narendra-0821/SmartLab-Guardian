@@ -22,7 +22,7 @@ and day-of-week constants.
 // GPIO pin numbers connected to the output devices
 #define LED1_DEVICE1 5  // P0.5 connected to Device 1 indication LED
 #define LED2_DEVICE2 4  // P0.4 connected to Device 2 indication LED
-#define BUZZER       21 //P0.21 for emergency buzzer indication
+#define BUZZER       25 //P0.21 for emergency buzzer indication
 
 
 
@@ -38,11 +38,11 @@ and day-of-week constants.
 /*================ IR REMOTE COMMAND DEFINITIONS ================*/
 
 // RC5 command values assigned to the remote-control buttons
-#define IR_KEY_1 1
-#define IR_KEY_2 2
-#define IR_KEY_TIME 47
-#define TIME_BOUNDARY_KEY 38
-#define SOUND_KEY 11
+#define IR_KEY_1 1  // key 1
+#define IR_KEY_2 2	//key 2
+#define IR_KEY_TIME 47   //key for time symbol 
+#define TIME_BOUNDARY_KEY 3 //key 3
+#define SOUND_KEY 11 //key for sound symbol
 
 // Check whether the received IR address and command match Device 1 control
 #define KEY_1_PRESSED (address==0 && command==IR_KEY_1)
@@ -63,7 +63,7 @@ and day-of-week constants.
 // Constant representing the ON state in software LED status variables
 #define LED_ON 1
 
-// Turn OFF LED1 and LED2 by setting their GPIO output bits
+// Turn OFF Active Low LED1 and LED2 by setting their GPIO output bits
 #define AL_LED1_OFF IOSET0=1<<LED1_DEVICE1
 #define AL_LED2_OFF IOSET0=1<<LED2_DEVICE2
 

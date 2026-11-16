@@ -139,7 +139,7 @@ void emergencyAlert(void){
 	while(!(SOUND_KEY_PRESSED)){
 		readTSOP(&address,&command,&toggle);
 	}
-
+	
 	// Stop the buzzer after receiving the SOUND command
 	BUZZER_OFF;
 
@@ -173,7 +173,7 @@ void rtc_interrupt(void){
 	StrLCD("1.EDIT RTC");
 	CmdLCD(GOTO_LINE2_POS0);
 	StrLCD("2.TIME BOUNDARIES");
-
+	
 	// Wait until a keypad key is pressed
 	while(ColScan()!=0){
 		key=KeyScan();                    // Read the pressed key from the keypad
@@ -316,15 +316,15 @@ void editTimeBoundaries(){
 	// Display the laboratory operating-time configuration screen
 	StrLCD("Time Boundaries");
 	CmdLCD(GOTO_LINE2_POS0);
-	StrLCD("START TIME=");
-	CmdLCD(GOTO_LINE2_POS0+13);
+	StrLCD("STRT TIME=");
+	CmdLCD(GOTO_LINE2_POS0+14);
 
 	// Read the administrator-entered laboratory start hour
 	sTime=startTime;
 	ReadTime(&sTime,&lastKey);
 
 	// Update the start time only if the entered hour is valid (0-23)
-	if(sTime<=23 && startTime!=sTime) startTime=sTime;
+	if(sTime>0 && sTime<=23 && startTime!=sTime) startTime=sTime;
 
 	delay_s(1);
 	CmdLCD(CLEAR_LCD);
@@ -336,11 +336,11 @@ void editTimeBoundaries(){
 	CmdLCD(GOTO_LINE2_POS0+12);
 
 	// Read the administrator-entered laboratory end hour
-	eTime=endTime;;
+	eTime=endTime;
 	ReadTime(&eTime,&lastKey);
 
 	// Update the end time only if the entered hour is valid (0-23)
-	if(eTime<=23 && endTime!=eTime) endTime=eTime;
+	if(eTime>0 && eTime<=23 && endTime!=eTime) endTime=eTime;
 
 	delay_s(1);
 	CmdLCD(CLEAR_LCD);

@@ -65,10 +65,10 @@ int main(){
     /* Display project welcome screen */
     CharLCD(3);                             // Display the custom SmartLab Guardian symbol
     StrLCD("  SMART LAB  ");                // Display project name
-    CmdLCD(GOTO_LINE1_POS0+13);             // Move cursor to the remaining position on line 1
+    CmdLCD(GOTO_LINE1_POS0+15);             // Move cursor to the remaining position on line 1
     CharLCD(3);                             // Display the Guardian symbol again
     CmdLCD(GOTO_LINE2_POS0);                // Move cursor to the beginning of line 2
-    StrLCD("   GUARDIAN  ");                // Display project title
+    StrLCD("   GUARDIAN   ");                // Display project title
     delay_s(3);                             // Keep the welcome screen visible for 3 seconds
     CmdLCD(CLEAR_LCD);                      // Clear the welcome screen
 
@@ -161,7 +161,7 @@ int main(){
 
         if(emergency==1){
             emergencyAlert();                // Execute the emergency response routine
-            emergency=0;                    // Clear the software emergency flag after handling
+            emergency=0;                     // Clear the software emergency flag after handling
         }
 
         if(rtc_button_clicked==1){
