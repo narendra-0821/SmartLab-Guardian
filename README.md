@@ -600,7 +600,7 @@ The following test cases identify the important functional areas to validate.
 ### Test Result Recording
 
 | Test ID | Actual Result | Status | 
-|---|---|---|---|
+|---|---|---|
 | TC01 | System initialization | LCD and peripherals initialize correctly |
 | TC02 | Correct password | Authentication succeeds |
 | TC03 | Incorrect password | Authentication failure is handled successfully|
@@ -613,7 +613,6 @@ The following test cases identify the important functional areas to validate.
 | TC10 | RTC edit switch | EINT3 configuration routine is entered successfully |
 | TC11 | Device indication | LED states responded to supported commands |
 | TC12 | Emergency buzzer | Buzzer responded to emergency handling |
-| TC01–TC12 | To be recorded | Not yet recorded | Add test evidence |
 
 ---
 
