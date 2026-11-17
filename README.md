@@ -537,7 +537,6 @@ Add screenshots from the working system to the corresponding folders. Do not use
 <table>
   <tr>
     <th align="center">RTC Display</th>
-    <th align="center">Operating-Hour Status</th>
   </tr>
   <tr>
     <td align="center">
