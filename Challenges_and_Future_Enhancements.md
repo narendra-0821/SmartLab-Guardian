@@ -166,8 +166,6 @@ Before declaring the project complete:
 
 The `images/Challenges_and_Future_Enhancements_Overview.png` file is an explanatory infographic summarizing the project architecture, development challenges, and proposed enhancements. It is illustrative documentation, not proof that a particular hardware test was performed.
 
-For evidence of actual operation, add genuine photographs or screenshots from the project. Suggested evidence includes:
-
 | Suggested image | Recommended placement | What it should demonstrate |
 |---|---|---|
 | `hardware_setup.jpg` | Development Overview | Actual LPC2148 board, LCD, keypad, receiver, switches, and connected outputs. |
@@ -178,8 +176,4 @@ For evidence of actual operation, add genuine photographs or screenshots from th
 | `keil_build_result.png` | Section 2.6 | Genuine Keil build output. |
 | Test screenshots or video | Section 5 | Evidence of completed validation tests. |
 
-Example of embedding a genuine repository image:
-
-```markdown
-![SmartLab Guardian hardware setup](../Hardware/hardware_setup.jpg)
 ```
