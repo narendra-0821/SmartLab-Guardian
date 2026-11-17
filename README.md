@@ -113,7 +113,7 @@ The LPC2148 is the central processing unit. It receives information from the key
 ### 🖼️ System Block Diagram
 
 <p align="center">
-  <img src="Hardware/Block_Diagram/SmartLab Guardian_ Laboratory Control System.png"
+  <img src="Images/Block_Diagram/SmartLab Guardian_ Laboratory Control System.png"
        alt="SmartLab Guardian System Block Diagram"
        width="100%">
 </p>
@@ -515,7 +515,7 @@ Add screenshots from the working system to the corresponding folders. Do not use
 ### 🚀 System Initialization
 
 <p align="center">
-  <img src="Testing/Output_Screenshots/System-Initialization.png"
+  <img src="Testing/Output_Screenshots/01_System_Initialization.png"
        alt="System Initialization"
        width="75%">
 </p>
@@ -525,7 +525,7 @@ Add screenshots from the working system to the corresponding folders. Do not use
 ### 🔐 Password Authentication
 
 <p align="center">
-  <img src="Testing/Output_Screenshots/Password-Authentication.png"
+  <img src="Testing/Output_Screenshots/02_Password_Authentication.png"
        alt="Password Authentication"
        width="75%">
 </p>
@@ -541,12 +541,8 @@ Add screenshots from the working system to the corresponding folders. Do not use
   </tr>
   <tr>
     <td align="center">
-      <img src="Testing/Output_Screenshots/RTC-Display.png"
+      <img src="Testing/Output_Screenshots/04_RTC_Display_and_Menu.png"
            alt="RTC Display" width="100%">
-    </td>
-    <td align="center">
-      <img src="Testing/Output_Screenshots/Operating-Hour-Status.png"
-           alt="Operating Hour Status" width="100%">
     </td>
   </tr>
 </table>
@@ -554,7 +550,7 @@ Add screenshots from the working system to the corresponding folders. Do not use
 ### 📡 IR Remote Operation
 
 <p align="center">
-  <img src="Testing/Output_Screenshots/IR-Remote-Operation.png"
+  <img src="Testing/Output_Screenshots/02_Device_Status_Test_Captures.png"
        alt="IR Remote Operation"
        width="75%">
 </p>
@@ -564,7 +560,7 @@ Add screenshots from the working system to the corresponding folders. Do not use
 ### 🚨 Emergency Alert
 
 <p align="center">
-  <img src="Testing/Output_Screenshots/Emergency-Alert.png"
+  <img src="Testing/Output_Screenshots/03_Emergency_Response_Captures.png"
        alt="Emergency Alert"
        width="75%">
 </p>
@@ -574,7 +570,7 @@ Add screenshots from the working system to the corresponding folders. Do not use
 ### 🔌 Hardware Setup
 
 <p align="center">
-  <img src="Hardware/Hardware_Images/SmartLab-Guardian-Hardware.jpg"
+  <img src="Hardware/Hardware_Images/03_Hardware_Setup.jpg"
        alt="SmartLab Guardian Hardware Setup"
        width="85%">
 </p>
