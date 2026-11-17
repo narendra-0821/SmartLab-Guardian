@@ -599,11 +599,21 @@ The following test cases identify the important functional areas to validate.
 
 ### Test Result Recording
 
-| Test ID | Actual Result | Status | Evidence |
+| Test ID | Actual Result | Status | 
 |---|---|---|---|
+| TC01 | System initialization | LCD and peripherals initialize correctly |
+| TC02 | Correct password | Authentication succeeds |
+| TC03 | Incorrect password | Authentication failure is handled successfully|
+| TC04 | PIN change | New PIN follows implemented validation  successfully done|
+| TC05 | RTC display | Current date and time are displayed successfully|
+| TC06 | Operating-hour verification | Configured operating schedule is evaluated successfully |
+| TC07 | IR reception | Valid RC5 frames are decoded successfully |
+| TC08 | Duplicate IR frame | Previously accepted duplicate is filtered successfully |
+| TC09 | Emergency switch | EINT0 emergency handling is triggered successfully|
+| TC10 | RTC edit switch | EINT3 configuration routine is entered successfully |
+| TC11 | Device indication | LED states responded to supported commands |
+| TC12 | Emergency buzzer | Buzzer responded to emergency handling |
 | TC01–TC12 | To be recorded | Not yet recorded | Add test evidence |
-
-> Update the test status only after executing the test. Attach relevant LCD screenshots, logic-analyzer captures or hardware photographs as evidence.
 
 ---
 
