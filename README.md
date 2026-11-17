@@ -569,7 +569,7 @@ Add screenshots from the working system to the corresponding folders. Do not use
 ### 🔌 Hardware Setup
 
 <p align="center">
-  <img src="Testing_PNG's/Output_Screenshots/01_Hardware_In_Operation.jpg"
+  <img src="Testing_PNG's/Output_Screenshots/03_Hardware_Setup.jpg"
        alt="SmartLab Guardian Hardware Setup"
        width="85%">
 </p>
