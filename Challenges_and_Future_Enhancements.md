@@ -4,7 +4,7 @@
 > **Controller:** LPC2148 (ARM7) · **Language:** Embedded C  
 > **IDE / Compiler:** Keil µVision / ARMCC · **Programming Tool:** Flash Magic
 
-![SmartLab Guardian – Challenges and Future Enhancements](Images/SmartLab Guardian Development Challenges Infographic-1.png)
+![SmartLab Guardian – Challenges and Future Enhancements](Images/SmartLab_Guardian_Development_Challenges_Infographic-1.png)
 
 ---
 
@@ -183,5 +183,3 @@ Example of embedding a genuine repository image:
 ```markdown
 ![SmartLab Guardian hardware setup](../Hardware/hardware_setup.jpg)
 ```
-
-Replace the example filename and path with the actual location in your repository. Do not use illustrative or generated images as proof of hardware operation or test completion.
