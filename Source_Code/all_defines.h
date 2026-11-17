@@ -22,7 +22,7 @@ and day-of-week constants.
 // GPIO pin numbers connected to the output devices
 #define LED1_DEVICE1 5  // P0.5 connected to Device 1 indication LED
 #define LED2_DEVICE2 4  // P0.4 connected to Device 2 indication LED
-#define BUZZER       25 //P0.21 for emergency buzzer indication
+#define BUZZER       25 //P0.25 for emergency buzzer indication
 
 
 
