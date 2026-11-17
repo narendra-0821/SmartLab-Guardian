@@ -515,7 +515,7 @@ Add screenshots from the working system to the corresponding folders. Do not use
 ### 🚀 System Initialization
 
 <p align="center">
-  <img src="Testing/Output_Screenshots/01_System_Initialization.png"
+  <img src="Testing/Output_Screenshots/01_System_Initialization.jpg"
        alt="System Initialization"
        width="75%">
 </p>
@@ -525,7 +525,7 @@ Add screenshots from the working system to the corresponding folders. Do not use
 ### 🔐 Password Authentication
 
 <p align="center">
-  <img src="Testing/Output_Screenshots/02_Password_Authentication.png"
+  <img src="Testing/Output_Screenshots/02_Password_Authentication.jpg"
        alt="Password Authentication"
        width="75%">
 </p>
@@ -541,7 +541,7 @@ Add screenshots from the working system to the corresponding folders. Do not use
   </tr>
   <tr>
     <td align="center">
-      <img src="Testing/Output_Screenshots/04_RTC_Display_and_Menu.png"
+      <img src="Testing/Output_Screenshots/04_RTC_Display_and_Menu.jpg"
            alt="RTC Display" width="100%">
     </td>
   </tr>
@@ -550,7 +550,7 @@ Add screenshots from the working system to the corresponding folders. Do not use
 ### 📡 IR Remote Operation
 
 <p align="center">
-  <img src="Testing/Output_Screenshots/02_Device_Status_Test_Captures.png"
+  <img src="Testing/Output_Screenshots/02_Device_Status_Test_Captures.jpg"
        alt="IR Remote Operation"
        width="75%">
 </p>
@@ -560,7 +560,7 @@ Add screenshots from the working system to the corresponding folders. Do not use
 ### 🚨 Emergency Alert
 
 <p align="center">
-  <img src="Testing/Output_Screenshots/03_Emergency_Response_Captures.png"
+  <img src="Testing/Output_Screenshots/03_Emergency_Response_Captures.jpg"
        alt="Emergency Alert"
        width="75%">
 </p>
