@@ -55,7 +55,6 @@ u32 userPIN=9999;
 =========================================================*/
 
 /* Function to check whether the entered password is correct or not */
-
 void passWord(){
 			u32 password=0,attempts=1;
 			u8 lastKey,key;
@@ -160,40 +159,40 @@ void changePIN(){
 	u32 oldPIN=0,newPIN=0,verifyNewPIN=0;
 	u8 lastKey;
 
-	CmdLCD(CLEAR_LCD);
+OLD_PIN:CmdLCD(CLEAR_LCD);
 	StrLCD("Enter Old PIN");
 	CmdLCD(GOTO_LINE2_POS0);
 
 	// Read the currently stored PIN entered by the administrator
 	ReadNums(&oldPIN,&lastKey);
-
+	if(lastKey=='=') goto OLD_PIN;
 	delay_s(1);
 
 	// Check whether the entered old PIN matches the stored user PIN
 	if(oldPIN==userPIN){
 
-		CmdLCD(CLEAR_LCD);
+NEW_PIN:CmdLCD(CLEAR_LCD);
 		StrLCD("Enter new PIN");
 		CmdLCD(GOTO_LINE2_POS0);
 
 		// Read the new PIN entered by the administrator
 		ReadNums(&newPIN,&lastKey);
-
+		if(lastKey=='=') goto NEW_PIN;
 		delay_s(1);
-		CmdLCD(CLEAR_LCD);
+RE_PIN:CmdLCD(CLEAR_LCD);
 		StrLCD("Re Enter PIN");
 		CmdLCD(GOTO_LINE2_POS0);
 
 		// Read the new PIN again for confirmation
 		ReadNums(&verifyNewPIN,&lastKey);
-
+		if(lastKey=='=') goto RE_PIN;
 		delay_s(1);
 
 		// Compare the new PIN with the re-entered confirmation PIN
 		if(verifyNewPIN==newPIN){
 
 			CmdLCD(CLEAR_LCD);
-			StrLCD(" Password Changed");
+			StrLCD("Password Changed");
 
 			// Display the custom smile emoji after successful PIN change
 			BuildCGRAM(smileLUT,8);
@@ -217,8 +216,8 @@ void changePIN(){
 
 		// Display an error if the entered old PIN is incorrect
 		CmdLCD(CLEAR_LCD);
-		StrLCD("PIN change Fail");
-		delay_s(3);
+		StrLCD("WRONG OLD PIN!!");
+		TryAgain();
 		CmdLCD(CLEAR_LCD);
 	}
 }

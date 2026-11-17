@@ -181,11 +181,11 @@ void ReadNums(u32 *num,u8 *lastKey){
             CmdLCD(GOTO_LINE2_POS0 + cnt++);
             CharLCD('*');              // Display '*' instead of the actual password digit
             while(ColScan()==0);        // Wait until the pressed key is released
-
+						if(cnt==4) return;
         }else{
             if(*lastKey=='C'){          //'C' clears the entered password
-                CmdLCD(CLEAR_LCD);
-                StrLCD("enter PIN 4digits");
+							CmdLCD(GOTO_LINE2_POS0);
+                StrLCD("           ");
                 cnt=0;
                 *num=0;
 
@@ -198,9 +198,9 @@ void ReadNums(u32 *num,u8 *lastKey){
             }else if(*lastKey== '='){   //'=' acts as the enter key
                 if(cnt!=4) {            // Check whether exactly four digits were entered
                     CmdLCD(CLEAR_LCD);
-                    StrLCD("Please Enter");
+                    StrLCD("  Please Enter ");
                     CmdLCD(GOTO_LINE2_POS0);
-                    StrLCD("4Digits To UNLOCK");
+                    StrLCD(" 4 Digit PIN ");
                     delay_s(2);
                     break;
                 }

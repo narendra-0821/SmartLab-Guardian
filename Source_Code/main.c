@@ -82,7 +82,6 @@ int main(){
 
         /* Check whether the current time is within laboratory operating hours */
         if(IsWithinTime()){
-
             // Check whether the decoded IR command corresponds to Device 1
             if(KEY_1_PRESSED){
                 LED1_TOGGLE;                 // Toggle the output connected to Device 1
@@ -94,7 +93,6 @@ int main(){
                 led2_status = led2_status^1; // Toggle the software status flag using XOR
 
             }
-
         }else{
 
             // Inform the user that the laboratory is outside its operating hours
@@ -156,18 +154,7 @@ int main(){
         CmdLCD(GOTO_LINE2_POS0);             // Move cursor to the beginning of LCD line 2
         StrLCD("FOR TIME:");                 // Display the time information prompt
         CharLCD(4);                          // Display the custom clock symbol
-
-        /*================ CHECK EXTERNAL INTERRUPT FLAGS ================*/
-
-        if(emergency==1){
-            emergencyAlert();                // Execute the emergency response routine
-            emergency=0;                     // Clear the software emergency flag after handling
-        }
-
-        if(rtc_button_clicked==1){
-            rtc_interrupt();                 // Enter the RTC configuration routine
-            rtc_button_clicked=0;            // Clear the RTC button event flag after handling
-        }
+				
 
         /*================ IR REMOTE COMMAND RECEPTION ================*/
 
