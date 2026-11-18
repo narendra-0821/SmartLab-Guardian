@@ -1,4 +1,3 @@
-
 /*******************************************
 Program: External Interrupt and Switch Control
 Controller: LPC2148 (ARM7)
@@ -201,144 +200,167 @@ void rtc_interrupt(void){
 /*=========================================================
         RTC TIME EDITING
 =========================================================*/
+ 
 
 void editRTC(){
+	while(1){
+		CmdLCD(CLEAR_LCD);
+		StrLCD("1.H 2.M 3.S 4.D");	
+		CmdLCD(GOTO_LINE2_POS0);
+		StrLCD("5.MN 6.Y 7.EXIT");
+		key=KeyScan();
+		delay_ms(500);
+		switch(key){
+			case '1' :// Display the RTC editing screen
+							HOUR_JUMP:
+							CmdLCD(CLEAR_LCD);
+							StrLCD("RTC EDIT MODE");
+							CmdLCD(GOTO_LINE2_POS0);
+							StrLCD("SET HOUR= ");
+							CmdLCD(GOTO_LINE2_POS0+10);
 
-						// Display the RTC editing screen
-HOUR_JUMP:	CmdLCD(CLEAR_LCD);
+							// Read the administrator-entered hour value
+							hour=HOUR;
+							ReadTime((u32*)&hour,&lastKey);
+
+							// Accept the entered hour only if it is within 0-23
+							// and different from the current RTC hour
+							if(hour >=0 && hour<=23) HOUR=hour;
+							else{
+								CmdLCD(GOTO_LINE2_POS0);
+								StrLCD("Invalid!     ");
+								delay_ms(300);
+								goto HOUR_JUMP;
+							}
+							
+							delay_ms(500);
+							break;
+							// Display the minute editing screen
+			case '2':   
+						MIN_JUMP:
+						CmdLCD(CLEAR_LCD);
 						StrLCD("RTC EDIT MODE");
 						CmdLCD(GOTO_LINE2_POS0);
-						StrLCD("SET HOUR= ");
+						StrLCD("SET MIN = ");
 						CmdLCD(GOTO_LINE2_POS0+10);
 
-						// Read the administrator-entered hour value
-						hour=HOUR;
-						ReadTime((u32*)&hour,&lastKey);
+						// Read the administrator-entered minute value
+						min=MIN;
+						ReadTime((u32*)&min,&lastKey);
 
-						// Accept the entered hour only if it is within 0-23
-						// and different from the current RTC hour
-						if(hour >=0 && hour<=23) HOUR=hour;
+						// Accept the entered minute only if it is within 0-59
+						// and different from the current RTC minute
+						if(min>=0 && min<=59) MIN=min;
 						else{
 							CmdLCD(GOTO_LINE2_POS0);
 							StrLCD("Invalid!     ");
 							delay_ms(300);
-							goto HOUR_JUMP;
+							goto MIN_JUMP;
 						}
-						
 						delay_ms(500);
-						// Display the minute editing screen
-MIN_JUMP: CmdLCD(CLEAR_LCD);
-
-					StrLCD("RTC EDIT MODE");
-					CmdLCD(GOTO_LINE2_POS0);
-					StrLCD("SET MIN = ");
-					CmdLCD(GOTO_LINE2_POS0+10);
-
-					// Read the administrator-entered minute value
-					min=MIN;
-					ReadTime((u32*)&min,&lastKey);
-
-					// Accept the entered minute only if it is within 0-59
-					// and different from the current RTC minute
-					if(min>=0 && min<=59) MIN=min;
-					else{
+						break;
+			case '3':
+				// Display the second editing screen
+						SEC_JUMP:
+						CmdLCD(CLEAR_LCD);
+						StrLCD("RTC EDIT MODE");
 						CmdLCD(GOTO_LINE2_POS0);
-						StrLCD("Invalid!     ");
-						delay_ms(300);
-						goto MIN_JUMP;
-					}
-					delay_ms(500);
-	// Display the second editing screen
-SEC_JUMP:CmdLCD(CLEAR_LCD);
+						StrLCD("SET SEC= ");
+						CmdLCD(GOTO_LINE2_POS0+10);
 
-	
-				StrLCD("RTC EDIT MODE");
-				CmdLCD(GOTO_LINE2_POS0);
-				StrLCD("SET SEC= ");
-				CmdLCD(GOTO_LINE2_POS0+10);
+						// Read the administrator-entered second value
+						sec=SEC;
+						ReadTime((u32*)&sec,&lastKey);
+						
+						// Accept the entered second only if it is within 0-59
+						// and different from the current RTC second
+						if(sec>=0 && sec<=59 ) SEC=sec;
+						else{
+							CmdLCD(GOTO_LINE2_POS0);
+							StrLCD("Invalid!     ");
+							delay_ms(300);
+							goto SEC_JUMP;
+						}
+						delay_ms(500);
+						break;
+					
+			case '4':
+						// Display the date editing screen
+						DATE_JUMP:
+						CmdLCD(CLEAR_LCD);
+						StrLCD("RTC EDIT MODE");
+						CmdLCD(GOTO_LINE2_POS0);
+						StrLCD("SET DATE= ");
+						CmdLCD(GOTO_LINE2_POS0+10);
 
-				// Read the administrator-entered second value
-				sec=SEC;
-				ReadTime((u32*)&sec,&lastKey);
-				
-				// Accept the entered second only if it is within 0-59
-				// and different from the current RTC second
-				if(sec>=0 && sec<=59 ) SEC=sec;
-				else{
-					CmdLCD(GOTO_LINE2_POS0);
-					StrLCD("Invalid!     ");
-					delay_ms(300);
-					goto SEC_JUMP;
-				}
-				delay_ms(500);
-				
-// Display the date editing screen
-DATE_JUMP:CmdLCD(CLEAR_LCD);
-				StrLCD("RTC EDIT MODE");
-				CmdLCD(GOTO_LINE2_POS0);
-				StrLCD("SET DATE= ");
-				CmdLCD(GOTO_LINE2_POS0+10);
+						// Read the administrator-entered date value
+						date=DOM;
+						ReadTime((u32*)&date,&lastKey);
 
-				// Read the administrator-entered date value
-				date=DOM;
-				ReadTime((u32*)&date,&lastKey);
+						// Accept the entered date only if it is within the specified range
+						if(date>0 && date<=31 ) DOM=date;
+						else{
+							CmdLCD(GOTO_LINE2_POS0);
+							StrLCD("Invalid!     ");
+							delay_ms(300);
+							goto DATE_JUMP;
+						}
+						delay_ms(500);
+						 break;
+			case '5':
+						// Display the month editing screen
+						MONTH_JUMP:
+						CmdLCD(CLEAR_LCD);
+						StrLCD("RTC EDIT MODE");
+						CmdLCD(GOTO_LINE2_POS0);
+						StrLCD("SET MONTH= ");
+						CmdLCD(GOTO_LINE2_POS0+11);
 
-				// Accept the entered date only if it is within the specified range
-				if(date>0 && date<=31 ) DOM=date;
-				else{
-					CmdLCD(GOTO_LINE2_POS0);
-					StrLCD("Invalid!     ");
-					delay_ms(300);
-					goto DATE_JUMP;
-				}
-				delay_ms(500);
-				
-// Display the month editing screen
-MONTH_JUMP:	CmdLCD(CLEAR_LCD);
-				StrLCD("RTC EDIT MODE");
-				CmdLCD(GOTO_LINE2_POS0);
-				StrLCD("SET MONTH= ");
-				CmdLCD(GOTO_LINE2_POS0+11);
+						// Read the administrator-entered month value
+						month=MONTH;
+						ReadTime((u32*)&month,&lastKey);
 
-				// Read the administrator-entered month value
-				month=MONTH;
-				ReadTime((u32*)&month,&lastKey);
+						// Accept the entered month only if it is within 1-12
+						if(month>0 && month<=12) MONTH=month;
+						else{
+							CmdLCD(GOTO_LINE2_POS0);
+							StrLCD("Invalid!     ");
+							delay_ms(300);
+							goto MONTH_JUMP;
+						}
+						delay_ms(500);
+						break;
+			case '6':
+						// Display the year editing screen
+						YEAR_JUMP:
+						CmdLCD(CLEAR_LCD);
+						StrLCD("RTC EDIT MODE");
+						CmdLCD(GOTO_LINE2_POS0);
+						StrLCD("SET YEAR= ");
+						CmdLCD(GOTO_LINE2_POS0+11);
 
-				// Accept the entered month only if it is within 1-12
-				if(month>0 && month<=12) MONTH=month;
-				else{
-					CmdLCD(GOTO_LINE2_POS0);
-					StrLCD("Invalid!     ");
-					delay_ms(300);
-					goto MONTH_JUMP;
-				}
-				delay_ms(500);
-// Display the year editing screen
-YEAR_JUMP:CmdLCD(CLEAR_LCD);
+						// Read the administrator-entered year value
+						year=YEAR;
+						ReadYear((u32*)&year,&lastKey);
 
-				// Display the year editing screen
-				StrLCD("RTC EDIT MODE");
-				CmdLCD(GOTO_LINE2_POS0);
-				StrLCD("SET YEAR= ");
-				CmdLCD(GOTO_LINE2_POS0+11);
+						// Accept the entered year only if it is within the specified range
+						if(year>=2000 && year<=4056) YEAR=year;
+						else{
+							CmdLCD(GOTO_LINE2_POS0);
+							StrLCD("Invalid!     ");
+							delay_ms(300);
+							goto YEAR_JUMP;
+						}
+						delay_ms(500);
+						CmdLCD(CLEAR_LCD);
+						break;
+			case '7': return;
 
-				// Read the administrator-entered year value
-				year=YEAR;
-				ReadYear((u32*)&year,&lastKey);
+			}
+	}
 
-				// Accept the entered year only if it is within the specified range
-				if(year>=2000 && year<=4056) YEAR=year;
-				else{
-					CmdLCD(GOTO_LINE2_POS0);
-					StrLCD("Invalid!     ");
-					delay_ms(300);
-					goto YEAR_JUMP;
-				}
-				delay_ms(500);
-				CmdLCD(CLEAR_LCD);
-
-	return;
 }
+
 
 
 /*=========================================================
@@ -401,4 +423,3 @@ END_JUMP:CmdLCD(CLEAR_LCD);
 
 	return;
 }
-

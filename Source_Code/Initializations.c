@@ -135,58 +135,9 @@ void Init_LEDS(){
 
 unsigned int IsWithinTime(void)
 {
-    if(startTime < endTime){            // Normal schedule: start time is earlier than end time
+    if(startTime < endTime){       
         if(HOUR >= startTime && HOUR < endTime) // Check whether current hour is within the schedule
             return 1;                   // Return 1 if laboratory operating time is valid
-
     }
-		/*else if(startTime > endTime) {     // Overnight schedule: operating hours cross midnight
-        if(HOUR >= startTime || HOUR < endTime) // Check time before midnight OR after midnight
-            return 1;                   // Return 1 if current hour is within the schedule
-    }*/
-
     return 0;                           // Return 0 if current hour is outside operating hours
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*unsigned int IsWithinTime(void)
-{
-    unsigned int currentMinutes;
-    unsigned int startMinutes;
-    unsigned int endMinutes;
-
-    // Convert current RTC time into total minutes
-    currentMinutes =(HOUR*60) + MIN;
-
-    // Convert laboratory start and end times into total minutes
-    startMinutes = (startTime *60) +startMinute;
-    endMinutes = (endTime *60)+ endMinute;
-
-    // Normal schedule: start time is earlier than end time
-    if(startMinutes <endMinutes)
-    {
-        if(currentMinutes>= startMinutes && currentMinutes <endMinutes)
-            return 1;
-    }
-
-    // Overnight schedule: operating hours cross midnight
-    else if(startMinutes >endMinutes)
-    {
-        if(currentMinutes >=startMinutes || currentMinutes< endMinutes)
-            return 1;
-    }
-
-    return 0;
-}*/

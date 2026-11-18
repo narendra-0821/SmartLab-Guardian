@@ -165,6 +165,8 @@ int main(){
             if(emergency==1){
                 emergencyAlert();            // Execute the emergency response routine
                 emergency=0;                 // Clear the emergency flag after handling
+								address=0;
+							  command=0;
                 break;                        // Exit the IR reception loop after emergency handling
             }
 
@@ -172,6 +174,8 @@ int main(){
             if(rtc_button_clicked==1){
                 rtc_interrupt();              // Enter the RTC configuration routine
                 rtc_button_clicked=0;         // Clear the RTC button event flag after handling
+								address=0;
+							  command=0;
                 break;                        // Exit the IR reception loop after RTC handling
             }
         }

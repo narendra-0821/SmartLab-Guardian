@@ -86,8 +86,8 @@ FIRST:	CmdLCD(CLEAR_LCD);
 					delay_ms(500);
 
 // TRY_AGAIN label: Entry point for password verification
-TRY_AGAIN:    // If attempts are more than 3, display a warning message to admin
-
+					TRY_AGAIN:    
+					// If attempts are more than 3, display a warning message to admin
 					if(attempts>3){               // Check whether the allowed attempt count is exceeded
 						CmdLCD(CLEAR_LCD);
 						StrLCD("TOO MANY ATTEMPTS");
@@ -171,15 +171,17 @@ OLD_PIN:CmdLCD(CLEAR_LCD);
 	// Check whether the entered old PIN matches the stored user PIN
 	if(oldPIN==userPIN){
 
-NEW_PIN:CmdLCD(CLEAR_LCD);
+		NEW_PIN:
+		CmdLCD(CLEAR_LCD);
 		StrLCD("Enter new PIN");
 		CmdLCD(GOTO_LINE2_POS0);
 
 		// Read the new PIN entered by the administrator
 		ReadNums(&newPIN,&lastKey);
-		if(lastKey=='=') goto NEW_PIN;
+		if(lastKey=='=') goto NEW_PIN; //if entered PIN count < 4; then give another choice to enter correct PIN
 		delay_s(1);
-RE_PIN:CmdLCD(CLEAR_LCD);
+		RE_PIN:
+		CmdLCD(CLEAR_LCD);
 		StrLCD("Re Enter PIN");
 		CmdLCD(GOTO_LINE2_POS0);
 

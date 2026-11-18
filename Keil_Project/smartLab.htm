@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\smartLab.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\smartLab.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Tue Nov 17 11:46:23 2026
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Wed Nov 18 23:08:00 2026
 <BR><P>
 <H3>Maximum Stack Usage =         96 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -206,7 +206,7 @@ Global Symbols
 <LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[b]"></a>main</STRONG> (ARM, 964 bytes, Stack size 0 bytes, main.o(.text))
+<P><STRONG><a name="[b]"></a>main</STRONG> (ARM, 992 bytes, Stack size 0 bytes, main.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96 + Unknown Stack Size
 <LI>Call Chain = main &rArr; rtc_interrupt &rArr; passWord &rArr; changePIN &rArr; ReadNums &rArr; StrLCD &rArr; CharLCD &rArr; WriteLCD
 </UL>
@@ -366,7 +366,8 @@ Global Symbols
 <LI><a href="#[34]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RowCheck
 <LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ColScan
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReadYear
+<BR>[Called By]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;editRTC
+<LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReadYear
 <LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReadNums
 <LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReadTime
 <LI><a href="#[2d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtc_interrupt
@@ -510,12 +511,13 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[2d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtc_interrupt
 </UL>
 
-<P><STRONG><a name="[3f]"></a>editRTC</STRONG> (ARM, 1084 bytes, Stack size 8 bytes, extinterruptswitches.o(.text))
+<P><STRONG><a name="[3f]"></a>editRTC</STRONG> (ARM, 1272 bytes, Stack size 8 bytes, extinterruptswitches.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 52 + Unknown Stack Size
 <LI>Call Chain = editRTC &rArr; ReadYear &rArr; KeyScan &rArr; RowCheck
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReadYear
 <LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReadTime
+<LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyScan
 <LI><a href="#[25]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StrLCD
 <LI><a href="#[26]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CmdLCD
 <LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
@@ -523,7 +525,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[2d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtc_interrupt
 </UL>
 
-<P><STRONG><a name="[2d]"></a>rtc_interrupt</STRONG> (ARM, 192 bytes, Stack size 8 bytes, extinterruptswitches.o(.text))
+<P><STRONG><a name="[2d]"></a>rtc_interrupt</STRONG> (ARM, 268 bytes, Stack size 8 bytes, extinterruptswitches.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96 + Unknown Stack Size
 <LI>Call Chain = rtc_interrupt &rArr; passWord &rArr; changePIN &rArr; ReadNums &rArr; StrLCD &rArr; CharLCD &rArr; WriteLCD
 </UL>
