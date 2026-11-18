@@ -716,7 +716,7 @@ SmartLab Guardian can serve as a foundation for:
 
 ---
 
-## 👨‍💻 Author
+## 👨‍💻 Author 
 **Name:** Narendra Machavarapu
 **E-Mail:** narendramachavarapu274@gmail.com
 
