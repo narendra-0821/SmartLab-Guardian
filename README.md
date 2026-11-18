@@ -717,6 +717,8 @@ SmartLab Guardian can serve as a foundation for:
 ---
 
 ## 👨‍💻 Author
+**Name:** Narendra Machavarapu
+**E-Mail:** narendramachavarapu274@gmail.com
 
 **SmartLab Guardian – Secure and Automated Laboratory Control System**
 
