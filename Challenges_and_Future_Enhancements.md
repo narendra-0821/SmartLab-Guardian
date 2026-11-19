@@ -4,7 +4,7 @@
 > **Controller:** LPC2148 (ARM7) · **Language:** Embedded C  
 > **IDE / Compiler:** Keil µVision / ARMCC · **Programming Tool:** Flash Magic
 
-![SmartLab Guardian – Challenges and Future Enhancements](Images/SmartLab_Guardian_Development_Challenges_Infographic1.png)
+![SmartLab Guardian – Challenges and Future Enhancements](Images/SmartLab Guardian Development Challenges Infographic-1.png)
 
 ---
 
